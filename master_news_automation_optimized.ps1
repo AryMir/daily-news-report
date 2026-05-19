@@ -1,4 +1,16 @@
-$ApiKey = "AIzaSyCY4aq1WKcZlfHcx5J0suWn0sthiKJepEI"
+$EnvFilePath = "C:\Antigravity\Daily_News_Project\.env"
+if (Test-Path $EnvFilePath) {
+    Get-Content $EnvFilePath | Where-Object { $_ -match '=' } | ForEach-Object {
+        $name, $value = $_ -split '=', 2
+        Set-Item -Path "env:\$($name.Trim())" -Value $value.Trim().Trim('"').Trim("'")
+    }
+}
+$ApiKey = $env:GEMINI_API_KEY
+
+if (-not $ApiKey) {
+    Write-Host "Error: GEMINI_API_KEY is missing from .env file!" -ForegroundColor Red
+    exit 1
+}
 $PromptFile = "C:\Antigravity\Daily_News_Project\Daily News Report Optimized.txt"
 $EmailScript = "C:\Antigravity\Daily_News_Project\send_news_email.ps1"
 $TempHtml = "$env:TEMP\daily_news_report_optimized.html"
