@@ -149,9 +149,9 @@ const generateHtml = (post, allPosts) => {
             --primary-blue: #113f8c;
             --bg-color: #f3f4f6;
             --content-bg: #ffffff;
-            --text-main: #1f2937;
-            --text-muted: #6b7280;
-            --accent: #3b82f6;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --accent: #2563eb;
         }
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -160,6 +160,7 @@ const generateHtml = (post, allPosts) => {
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
+            font-size: 18px;
         }
         .header-banner {
             background-color: var(--primary-blue);
@@ -203,8 +204,8 @@ const generateHtml = (post, allPosts) => {
             padding-bottom: 0.5rem;
             margin-top: 2rem;
         }
-        .main-content h1 { font-size: 2.2rem; margin-top: 0; }
-        .main-content h2 { font-size: 1.5rem; }
+        .main-content h1 { font-size: 2.5rem; margin-top: 0; }
+        .main-content h2 { font-size: 28px; }
         .main-content ul {
             padding-left: 1.5rem;
             margin-bottom: 1.5rem;
@@ -213,7 +214,7 @@ const generateHtml = (post, allPosts) => {
             margin-bottom: 0.75rem;
         }
         .main-content strong {
-            color: #111827;
+            color: #000000;
         }
         .table-container {
             overflow-x: auto;
@@ -251,7 +252,7 @@ const generateHtml = (post, allPosts) => {
         .sidebar h3 {
             margin-top: 0;
             color: var(--text-main);
-            font-size: 1.25rem;
+            font-size: 28px;
             border-bottom: 1px solid #e5e7eb;
             padding-bottom: 0.5rem;
         }
