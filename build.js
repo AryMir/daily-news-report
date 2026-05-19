@@ -143,7 +143,7 @@ const generateHtml = (post, allPosts) => {
     <title>${post.title}</title>
     <style>
         :root {
-            --primary-blue: #1E3A8A;
+            --primary-blue: #113f8c;
             --bg-color: #f3f4f6;
             --content-bg: #ffffff;
             --text-main: #1f2937;
@@ -160,8 +160,7 @@ const generateHtml = (post, allPosts) => {
         }
         .header-banner {
             background-color: var(--primary-blue);
-            color: white;
-            padding: 2rem 1rem;
+            padding: 4rem 2rem;
             text-align: center;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
@@ -169,10 +168,11 @@ const generateHtml = (post, allPosts) => {
             margin: 0;
             font-size: 2.5rem;
             letter-spacing: -0.025em;
+            color: #ffffff;
         }
         .header-banner p {
             margin: 0.5rem 0 0;
-            color: #bfdbfe;
+            color: #ffffff;
             font-size: 1.1rem;
         }
         .container {
@@ -274,7 +274,7 @@ const generateHtml = (post, allPosts) => {
 <body>
     <header class="header-banner">
         <h1>Optimized Daily News</h1>
-        <p>Your AI-curated daily briefing</p>
+        <p>${post.date}</p>
     </header>
     
     <div class="container">
