@@ -36,6 +36,9 @@ function parseMarkdown(md) {
         }
     }
 
+    // Strip redundant title, date, and horizontal rule from the top of the body
+    body = body.replace(/^\s*#\s+Optimized Daily News[\s\S]*?(?=##\s)/i, '');
+
     // Process tables
     body = body.replace(/((?:\|.+?\|\s*\n)+)/g, (match) => {
         let rows = match.trim().split('\n');
