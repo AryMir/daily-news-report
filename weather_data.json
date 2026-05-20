@@ -1,0 +1,81 @@
+{
+  "today": {
+    "location": "Henderson",
+    "date": "Tuesday, May 19",
+    "sunrise": "5:31 AM",
+    "sunset": "7:42 PM",
+    "uvIndex": 8.3,
+    "day": {
+      "temp": 76,
+      "condition": "Clear sky",
+      "humidity": 9,
+      "windSpeed": 10,
+      "windDir": "NE"
+    },
+    "night": {
+      "temp": 67,
+      "condition": "Clear sky",
+      "humidity": 10,
+      "windSpeed": 5,
+      "windDir": "SE"
+    },
+    "high": 77,
+    "low": 55
+  },
+  "forecast": [
+    {
+      "dayName": "20 Wed",
+      "high": 84,
+      "low": 57,
+      "condition": "Overcast",
+      "precipChance": 0,
+      "windSpeed": 12,
+      "windDir": "E"
+    },
+    {
+      "dayName": "21 Thu",
+      "high": 91,
+      "low": 66,
+      "condition": "Overcast",
+      "precipChance": 0,
+      "windSpeed": 15,
+      "windDir": "SW"
+    },
+    {
+      "dayName": "22 Fri",
+      "high": 92,
+      "low": 71,
+      "condition": "Overcast",
+      "precipChance": 0,
+      "windSpeed": 20,
+      "windDir": "SW"
+    },
+    {
+      "dayName": "23 Sat",
+      "high": 93,
+      "low": 72,
+      "condition": "Clear sky",
+      "precipChance": 0,
+      "windSpeed": 18,
+      "windDir": "SW"
+    },
+    {
+      "dayName": "24 Sun",
+      "high": 94,
+      "low": 73,
+      "condition": "Partly cloudy",
+      "precipChance": 0,
+      "windSpeed": 19,
+      "windDir": "S"
+    },
+    {
+      "dayName": "25 Mon",
+      "high": 94,
+      "low": 74,
+      "condition": "Overcast",
+      "precipChance": 2,
+      "windSpeed": 23,
+      "windDir": "SW"
+    }
+  ]
+}

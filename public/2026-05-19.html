@@ -5,48 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily News Report - 2026-05-19</title>
     <style>
-        :root {
-            --primary-blue: #113f8c;
-            --bg-color: #f3f4f6;
-            --content-bg: #ffffff;
-            --text-main: #111827;
-            --text-muted: #4b5563;
-            --accent: #2563eb;
-        }
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            font-size: 18px;
-        }
-        .header-banner {
-            background-color: var(--primary-blue);
-            padding: 4rem 2rem;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .header-banner h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            letter-spacing: -0.025em;
-            color: #ffffff;
-        }
-        .header-banner p {
-            margin: 0.5rem 0 0;
-            color: #ffffff;
-            font-size: 1.1rem;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
+        
+    :root {
+        --primary-blue: #113f8c;
+        --bg-color: #f3f4f6;
+        --content-bg: #ffffff;
+        --text-main: #111827;
+        --text-muted: #4b5563;
+        --accent: #2563eb;
+    }
+    body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        font-size: 14pt;
+    }
+    .nav-bar {
+        background-color: #0f2c60;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    .nav-bar a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    .nav-bar a:hover {
+        color: #93c5fd;
+    }
+    .header-banner {
+        background-color: var(--primary-blue);
+        padding: 4rem 2rem;
+        text-align: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .header-banner h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        letter-spacing: -0.025em;
+        color: #ffffff;
+    }
+    .header-banner p {
+        margin: 0.5rem 0 0;
+        color: #ffffff;
+        font-size: 1.1rem;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+        .container { display: flex; flex-direction: column; gap: 2rem; }
         .main-content {
             background-color: var(--content-bg);
             padding: 30px;
@@ -62,29 +80,12 @@
         }
         .main-content h1 { font-size: 2.5rem; margin-top: 0; }
         .main-content h2 { font-size: 28px; }
-        .main-content ul {
-            padding-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .main-content li {
-            margin-bottom: 0.75rem;
-        }
-        .main-content strong {
-            color: #000000;
-        }
-        .table-container {
-            overflow-x: auto;
-            margin: 1.5rem 0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            text-align: left;
-            padding: 0.75rem 1rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
+        .main-content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        .main-content li { margin-bottom: 0.75rem; }
+        .main-content strong { color: #000000; }
+        .table-container { overflow-x: auto; margin: 1.5rem 0; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid #e5e7eb; }
         th {
             background-color: var(--bg-color);
             color: var(--text-muted);
@@ -93,11 +94,7 @@
             font-size: 0.875rem;
             letter-spacing: 0.05em;
         }
-        hr {
-            border: 0;
-            border-top: 1px solid #e5e7eb;
-            margin: 2rem 0;
-        }
+        hr { border: 0; border-top: 1px solid #e5e7eb; margin: 2rem 0; }
         .sidebar {
             background-color: var(--content-bg);
             padding: 1.5rem;
@@ -106,37 +103,24 @@
             align-self: start;
         }
         .sidebar h3 {
-            margin-top: 0;
-            color: var(--text-main);
-            font-size: 28px;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 0.5rem;
+            margin-top: 0; color: var(--text-main); font-size: 28px;
+            border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem;
         }
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .sidebar li {
-            margin-bottom: 0.5rem;
-        }
-        .sidebar a {
-            text-decoration: none;
-            color: var(--accent);
-            transition: color 0.2s;
-        }
-        .sidebar a:hover {
-            color: var(--primary-blue);
-            text-decoration: underline;
-        }
+        .sidebar ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar li { margin-bottom: 0.5rem; }
+        .sidebar a { text-decoration: none; color: var(--accent); transition: color 0.2s; }
+        .sidebar a:hover { color: var(--primary-blue); text-decoration: underline; }
     </style>
 </head>
 <body>
+    <nav class="nav-bar">
+        <a href="index.html">Daily News</a>
+        <a href="weather.html">Daily Forecast</a>
+    </nav>
     <header class="header-banner">
         <h1>Optimized Daily News</h1>
         <p>2026-05-19</p>
     </header>
-    
     <div class="container">
         <main class="main-content">
             <h2>National Headlines</h2>
@@ -183,12 +167,9 @@
 <h2>Weather for Henderson, Nevada</h2>
 <p>Expect a sunny and very warm day in Henderson. The current temperature is around <strong>78°F</strong>. Today's high will reach approximately <strong>88°F</strong> with a low tonight near <strong>60°F</strong>. Winds will be from the North-Northeast at 5 to 10 mph. With plenty of sunshine and rising temperatures, be sure to stay hydrated. No weather alerts are currently in effect.</p>
         </main>
-        
         <aside class="sidebar">
             <h3>Recent Archives</h3>
-            <ul>
-                <li><a href="2026-05-19.html">Daily News Report - 2026-05-19</a></li><li><a href="2026-05-18.html">Daily News Report - 2026-05-18</a></li>
-            </ul>
+            <ul><li><a href="2026-05-19.html">Daily News Report - 2026-05-19</a></li><li><a href="2026-05-18.html">Daily News Report - 2026-05-18</a></li></ul>
         </aside>
     </div>
 </body>
