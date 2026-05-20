@@ -375,26 +375,54 @@ const generateWeatherHtml = (data) => {
 const generateScheduleHtml = (config) => {
     const masterPasscode = config.security_settings.master_passcode;
     
+    let calendarData = {};
+    const calendarDataPath = path.join(__dirname, 'calendar_data.json');
+    if (fs.existsSync(calendarDataPath)) {
+        calendarData = JSON.parse(fs.readFileSync(calendarDataPath, 'utf-8'));
+    }
+
     let scheduleRows = '';
-    let currentDate = new Date();
     
-    // Calculate days until NEXT Sunday.
-    // If today is Sunday (0), next Sunday is in 7 days.
-    let daysUntilNextSunday = (7 - currentDate.getDay()) % 7; 
-    let totalDays = daysUntilNextSunday === 0 ? 14 : daysUntilNextSunday + 7;
-    // ensure we go to the end of the *next* planned week.
-    
-    for (let i = 0; i <= totalDays; i++) {
-        let d = new Date(currentDate);
-        d.setDate(d.getDate() + i);
-        let dateStr = d.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
+    if (Object.keys(calendarData).length > 0) {
+        for (const [day, events] of Object.entries(calendarData)) {
+            let eventsHtml = '';
+            if (events.length === 0) {
+                eventsHtml = `<p style="color: var(--text-muted); font-style: italic;">No community or family events scheduled.</p>`;
+            } else {
+                for (let ev of events) {
+                    let timeStr = ev.isAllDay ? "All Day" : `${new Date(ev.displayStart).toLocaleTimeString('en-US', {hour: 'numeric', minute:'2-digit'})} - ${new Date(ev.displayEnd).toLocaleTimeString('en-US', {hour: 'numeric', minute:'2-digit'})}`;
+                    let locationStr = ev.location ? `<br><small style="color: var(--text-muted);">&#x1F4CD; ${ev.location}</small>` : '';
+                    eventsHtml += `<div style="padding: 10px 0; border-bottom: 1px dashed #eee;">
+                        <strong>${timeStr}</strong>: ${ev.summary} (${ev.owner})
+                        ${locationStr}
+                    </div>`;
+                }
+            }
+            
+            scheduleRows += `
+                <div class="schedule-day">
+                    <h3>${day}</h3>
+                    ${eventsHtml}
+                </div>
+            `;
+        }
+    } else {
+        let currentDate = new Date();
+        let daysUntilNextSunday = (7 - currentDate.getDay()) % 7; 
+        let totalDays = daysUntilNextSunday === 0 ? 14 : daysUntilNextSunday + 7;
         
-        scheduleRows += `
-            <div class="schedule-day">
-                <h3>${dateStr}</h3>
-                <p style="color: var(--text-muted); font-style: italic;">No community or family events scheduled.</p>
-            </div>
-        `;
+        for (let i = 0; i <= totalDays; i++) {
+            let d = new Date(currentDate);
+            d.setDate(d.getDate() + i);
+            let dateStr = d.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
+            
+            scheduleRows += `
+                <div class="schedule-day">
+                    <h3>${dateStr}</h3>
+                    <p style="color: var(--text-muted); font-style: italic;">No community or family events scheduled.</p>
+                </div>
+            `;
+        }
     }
 
     return `<!DOCTYPE html>
