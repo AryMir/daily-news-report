@@ -390,7 +390,7 @@ const generateScheduleHtml = (config) => {
                 eventsHtml = `<p style="color: var(--text-muted); font-style: italic;">No community or family events scheduled.</p>`;
             } else {
                 for (let ev of events) {
-                    let timeStr = ev.isAllDay ? "All Day" : `${new Date(ev.displayStart).toLocaleTimeString('en-US', {hour: 'numeric', minute:'2-digit'})} - ${new Date(ev.displayEnd).toLocaleTimeString('en-US', {hour: 'numeric', minute:'2-digit'})}`;
+                    let timeStr = ev.isAllDay ? "All Day" : `${new Date(ev.displayStart).toLocaleTimeString('en-US', {timeZone: config.timezone_settings.timezone, hour: 'numeric', minute:'2-digit'})} - ${new Date(ev.displayEnd).toLocaleTimeString('en-US', {timeZone: config.timezone_settings.timezone, hour: 'numeric', minute:'2-digit'})}`;
                     let locationStr = ev.location ? `<br><small style="color: var(--text-muted);">&#x1F4CD; ${ev.location}</small>` : '';
                     eventsHtml += `<div style="padding: 10px 0; border-bottom: 1px dashed #eee;">
                         <strong>${timeStr}</strong>: ${ev.summary} (${ev.owner})
