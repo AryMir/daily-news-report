@@ -8,5 +8,8 @@
   },
   "security_settings": {
     "master_passcode": "0145"
+  },
+  "timezone_settings": {
+    "timezone": "America/Los_Angeles"
   }
 }
