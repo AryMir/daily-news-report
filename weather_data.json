@@ -13,9 +13,9 @@
       "windDir": "NE"
     },
     "night": {
-      "temp": 67,
+      "temp": 68,
       "condition": "Clear sky",
-      "humidity": 10,
+      "humidity": 8,
       "windSpeed": 5,
       "windDir": "SE"
     },

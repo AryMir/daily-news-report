@@ -8,6 +8,76 @@ if (!fs.existsSync(publicDir)) {
   fs.mkdirSync(publicDir);
 }
 
+// Global Nav HTML
+const navHtml = `
+    <nav class="nav-bar">
+        <a href="index.html">Daily News</a>
+        <a href="weather.html">Daily Forecast</a>
+        <a href="schedule.html">Weekly Schedule</a>
+    </nav>
+`;
+
+// Global CSS
+const globalCss = `
+    :root {
+        --primary-blue: #113f8c;
+        --bg-color: #f3f4f6;
+        --content-bg: #ffffff;
+        --text-main: #111827;
+        --text-muted: #4b5563;
+        --accent: #2563eb;
+    }
+    body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        font-size: 14pt;
+    }
+    .nav-bar {
+        background-color: #0f2c60;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    .nav-bar a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    .nav-bar a:hover {
+        color: #93c5fd;
+    }
+    .header-banner {
+        background-color: var(--primary-blue);
+        padding: 4rem 2rem;
+        text-align: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .header-banner h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        letter-spacing: -0.025em;
+        color: #ffffff;
+    }
+    .header-banner p {
+        margin: 0.5rem 0 0;
+        color: #ffffff;
+        font-size: 1.1rem;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+`;
+
 function parseInline(text) {
     return text
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
@@ -34,7 +104,6 @@ function parseMarkdown(md) {
     }
 
     body = body.replace(/^[\s\S]*?(?=##\s)/i, '');
-
     body = body.replace(/((?:\|.+?\|\s*\n)+)/g, (match) => {
         let rows = match.trim().split('\n');
         let tableHtml = '<div class="table-container">\n<table>\n';
@@ -97,87 +166,6 @@ function parseMarkdown(md) {
     return { frontMatter, html: htmlLines.join('\n') };
 }
 
-const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md'));
-const posts = [];
-for (const file of files) {
-    const md = fs.readFileSync(path.join(contentDir, file), 'utf-8');
-    const { frontMatter, html } = parseMarkdown(md);
-    const dateStr = frontMatter.date || file.replace('.md', '');
-    const title = frontMatter.title || `Daily News Report - ${dateStr}`;
-    posts.push({ filename: file.replace('.md', '.html'), date: dateStr, title, html });
-}
-posts.sort((a, b) => b.date.localeCompare(a.date));
-
-const globalCss = `
-    :root {
-        --primary-blue: #113f8c;
-        --bg-color: #f3f4f6;
-        --content-bg: #ffffff;
-        --text-main: #111827;
-        --text-muted: #4b5563;
-        --accent: #2563eb;
-    }
-    body {
-        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: var(--bg-color);
-        color: var(--text-main);
-        line-height: 1.6;
-        font-size: 14pt;
-    }
-    .nav-bar {
-        background-color: #0f2c60;
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        padding: 1rem;
-    }
-    .nav-bar a {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 16px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }
-    .nav-bar a:hover {
-        color: #93c5fd;
-    }
-    .header-banner {
-        background-color: var(--primary-blue);
-        padding: 4rem 2rem;
-        text-align: center;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    }
-    .header-banner h1 {
-        margin: 0;
-        font-size: 2.5rem;
-        letter-spacing: -0.025em;
-        color: #ffffff;
-    }
-    .header-banner p {
-        margin: 0.5rem 0 0;
-        color: #ffffff;
-        font-size: 1.1rem;
-    }
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-    }
-`;
-
-const getIcon = (condition) => {
-    const c = condition.toLowerCase();
-    if (c.includes('sun') || c.includes('clear')) return '☀️';
-    if (c.includes('rain') || c.includes('drizzle')) return '🌧️';
-    if (c.includes('cloud') || c.includes('overcast')) return '☁️';
-    if (c.includes('snow')) return '❄️';
-    if (c.includes('thunder')) return '⛈️';
-    return '⛅';
-};
-
 const generateHtml = (post, allPosts) => {
     const archiveLinks = allPosts.map(p => `<li><a href="${p.filename}">${p.title}</a></li>`).join('');
     return `<!DOCTYPE html>
@@ -188,7 +176,7 @@ const generateHtml = (post, allPosts) => {
     <title>${post.title}</title>
     <style>
         ${globalCss}
-        .container { display: flex; flex-direction: column; gap: 2rem; }
+        .container-main { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; margin: 0 auto; padding: 2rem 1rem;}
         .main-content {
             background-color: var(--content-bg);
             padding: 30px;
@@ -237,15 +225,12 @@ const generateHtml = (post, allPosts) => {
     </style>
 </head>
 <body>
-    <nav class="nav-bar">
-        <a href="index.html">Daily News</a>
-        <a href="weather.html">Daily Forecast</a>
-    </nav>
+    ${navHtml}
     <header class="header-banner">
         <h1>Optimized Daily News</h1>
         <p>${post.date}</p>
     </header>
-    <div class="container">
+    <div class="container-main">
         <main class="main-content">
             ${post.html}
         </main>
@@ -256,6 +241,16 @@ const generateHtml = (post, allPosts) => {
     </div>
 </body>
 </html>`;
+};
+
+const getIcon = (condition) => {
+    const c = condition.toLowerCase();
+    if (c.includes('sun') || c.includes('clear')) return '☀️';
+    if (c.includes('rain') || c.includes('drizzle')) return '🌧️';
+    if (c.includes('cloud') || c.includes('overcast')) return '☁️';
+    if (c.includes('snow')) return '❄️';
+    if (c.includes('thunder')) return '⛈️';
+    return '⛅';
 };
 
 const generateWeatherHtml = (data) => {
@@ -279,95 +274,37 @@ const generateWeatherHtml = (data) => {
     <title>Daily Forecast - ${today.location}</title>
     <style>
         ${globalCss}
-        .weather-top {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 2rem;
-        }
+        .weather-top { display: flex; gap: 20px; margin-bottom: 2rem; }
         .weather-card {
-            background-color: var(--content-bg);
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            flex: 1;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            background-color: var(--content-bg); border-radius: 0.5rem;
+            padding: 1.5rem; flex: 1; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
         }
         .weather-card h2 {
-            margin-top: 0;
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
+            margin-top: 0; color: var(--primary-blue); font-size: 1.5rem;
+            border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; margin-bottom: 1rem;
         }
-        .card-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-            gap: 1.5rem;
-        }
-        .main-stat {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .temp-large {
-            font-size: 3rem;
-            font-weight: bold;
-            line-height: 1;
-        }
-        .icon-large {
-            font-size: 2.5rem;
-        }
-        .desc-text {
-            font-size: 1rem;
-            color: var(--text-main);
-        }
+        .card-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 1.5rem; }
+        .main-stat { display: flex; align-items: center; gap: 10px; }
+        .temp-large { font-size: 3rem; font-weight: bold; line-height: 1; }
+        .icon-large { font-size: 2.5rem; }
+        .desc-text { font-size: 1rem; color: var(--text-main); }
         .quadrants {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 10px;
-            background-color: #f9fafb;
-            padding: 1rem;
-            border-radius: 0.5rem;
+            grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px; background-color: #f9fafb; padding: 1rem; border-radius: 0.5rem;
         }
-        .quadrant {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-        .q-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-        .q-val {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--text-main);
-        }
-        
+        .quadrant { display: flex; flex-direction: column; text-align: center; }
+        .q-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
+        .q-val { font-size: 1.1rem; font-weight: bold; color: var(--text-main); }
         .forecast-list {
-            background-color: var(--content-bg);
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            background-color: var(--content-bg); border-radius: 0.5rem;
+            padding: 1.5rem; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
         }
         .forecast-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid #e5e7eb;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 0; border-bottom: 1px solid #e5e7eb;
         }
-        .forecast-row:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .f-col {
-            flex: 1;
-        }
+        .forecast-row:last-child { border-bottom: none; padding-bottom: 0; }
+        .f-col { flex: 1; }
         .f-day { font-weight: 600; color: var(--text-muted); }
         .f-temp { text-align: center; font-size: 1.1rem; }
         .f-cond { text-align: center; }
@@ -376,15 +313,11 @@ const generateWeatherHtml = (data) => {
     </style>
 </head>
 <body>
-    <nav class="nav-bar">
-        <a href="index.html">Daily News</a>
-        <a href="weather.html">Daily Forecast</a>
-    </nav>
+    ${navHtml}
     <header class="header-banner">
         <h1>Daily Forecast: ${today.location}</h1>
         <p>${today.date}</p>
     </header>
-    
     <div class="container">
         <div class="weather-top">
             <div class="weather-card">
@@ -400,22 +333,10 @@ const generateWeatherHtml = (data) => {
                         Wind ${today.day.windSpeed} mph ${today.day.windDir}.
                     </div>
                     <div class="quadrants">
-                        <div class="quadrant">
-                            <span class="q-label">Humidity</span>
-                            <span class="q-val">${today.day.humidity}%</span>
-                        </div>
-                        <div class="quadrant">
-                            <span class="q-label">UV Index</span>
-                            <span class="q-val">${today.uvIndex}</span>
-                        </div>
-                        <div class="quadrant">
-                            <span class="q-label">Sunrise</span>
-                            <span class="q-val">${today.sunrise}</span>
-                        </div>
-                        <div class="quadrant">
-                            <span class="q-label">Sunset</span>
-                            <span class="q-val">${today.sunset}</span>
-                        </div>
+                        <div class="quadrant"><span class="q-label">Humidity</span><span class="q-val">${today.day.humidity}%</span></div>
+                        <div class="quadrant"><span class="q-label">UV Index</span><span class="q-val">${today.uvIndex}</span></div>
+                        <div class="quadrant"><span class="q-label">Sunrise</span><span class="q-val">${today.sunrise}</span></div>
+                        <div class="quadrant"><span class="q-label">Sunset</span><span class="q-val">${today.sunset}</span></div>
                     </div>
                 </div>
             </div>
@@ -433,22 +354,10 @@ const generateWeatherHtml = (data) => {
                         Wind ${today.night.windSpeed} mph ${today.night.windDir}.
                     </div>
                     <div class="quadrants">
-                        <div class="quadrant">
-                            <span class="q-label">Humidity</span>
-                            <span class="q-val">${today.night.humidity}%</span>
-                        </div>
-                        <div class="quadrant">
-                            <span class="q-label">UV Index</span>
-                            <span class="q-val">0</span>
-                        </div>
-                        <div class="quadrant">
-                            <span class="q-label">Moonrise</span>
-                            <span class="q-val">--</span>
-                        </div>
-                        <div class="quadrant">
-                            <span class="q-label">Moonset</span>
-                            <span class="q-val">--</span>
-                        </div>
+                        <div class="quadrant"><span class="q-label">Humidity</span><span class="q-val">${today.night.humidity}%</span></div>
+                        <div class="quadrant"><span class="q-label">UV Index</span><span class="q-val">0</span></div>
+                        <div class="quadrant"><span class="q-label">Moonrise</span><span class="q-val">--</span></div>
+                        <div class="quadrant"><span class="q-label">Moonset</span><span class="q-val">--</span></div>
                     </div>
                 </div>
             </div>
@@ -463,7 +372,169 @@ const generateWeatherHtml = (data) => {
 </html>`;
 };
 
-// Write out all blog posts
+const generateScheduleHtml = (config) => {
+    const masterPasscode = config.security_settings.master_passcode;
+    
+    let scheduleRows = '';
+    let currentDate = new Date();
+    
+    // Calculate days until NEXT Sunday.
+    // If today is Sunday (0), next Sunday is in 7 days.
+    let daysUntilNextSunday = (7 - currentDate.getDay()) % 7; 
+    let totalDays = daysUntilNextSunday === 0 ? 14 : daysUntilNextSunday + 7;
+    // ensure we go to the end of the *next* planned week.
+    
+    for (let i = 0; i <= totalDays; i++) {
+        let d = new Date(currentDate);
+        d.setDate(d.getDate() + i);
+        let dateStr = d.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
+        
+        scheduleRows += `
+            <div class="schedule-day">
+                <h3>${dateStr}</h3>
+                <p style="color: var(--text-muted); font-style: italic;">No community or family events scheduled.</p>
+            </div>
+        `;
+    }
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Schedule</title>
+    <style>
+        ${globalCss}
+        .locked-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+        }
+        .password-box {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .password-box h2 {
+            margin-top: 0;
+            color: var(--primary-blue);
+        }
+        .password-box input {
+            padding: 12px;
+            font-size: 18px;
+            margin-top: 20px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .password-box button {
+            padding: 12px 30px;
+            font-size: 16px;
+            margin-top: 20px;
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .password-box button:hover {
+            background-color: var(--accent);
+        }
+        #schedule-content {
+            display: none;
+        }
+        .schedule-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .schedule-day {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .schedule-day h3 {
+            margin-top: 0;
+            color: var(--primary-blue);
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    ${navHtml}
+    
+    <div id="locked-view" class="locked-container">
+        <div class="password-box">
+            <h2>Access Restricted</h2>
+            <p>Please enter the master passcode to view the weekly schedule.</p>
+            <input type="password" id="passcode-input" placeholder="Enter Passcode" onkeydown="if(event.key === 'Enter') checkPasscode()" />
+            <br>
+            <button onclick="checkPasscode()">Unlock</button>
+            <p id="error-msg" style="color: red; display: none; margin-top: 15px; font-weight: bold;">Incorrect passcode.</p>
+        </div>
+    </div>
+    
+    <div id="schedule-content">
+        <header class="header-banner">
+            <h1>Weekly Schedule</h1>
+            <p>Rolling view: Today through next Sunday</p>
+        </header>
+        <div class="container">
+            <div class="schedule-grid">
+               ${scheduleRows}
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       const MASTER_PASSCODE = "${masterPasscode}";
+       
+       function unlock() {
+           document.getElementById('locked-view').style.display = 'none';
+           document.getElementById('schedule-content').style.display = 'block';
+       }
+       
+       function checkPasscode() {
+           const input = document.getElementById('passcode-input').value;
+           if (input === MASTER_PASSCODE) {
+               localStorage.setItem('schedule_auth_master', 'true');
+               unlock();
+           } else {
+               document.getElementById('error-msg').style.display = 'block';
+           }
+       }
+       
+       if (localStorage.getItem('schedule_auth_master') === 'true') {
+           unlock();
+       }
+    </script>
+</body>
+</html>`;
+}
+
+// 1. Compile Markdown Blog Posts
+const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md'));
+const posts = [];
+for (const file of files) {
+    const md = fs.readFileSync(path.join(contentDir, file), 'utf-8');
+    const { frontMatter, html } = parseMarkdown(md);
+    const dateStr = frontMatter.date || file.replace('.md', '');
+    const title = frontMatter.title || `Daily News Report - ${dateStr}`;
+    posts.push({ filename: file.replace('.md', '.html'), date: dateStr, title, html });
+}
+posts.sort((a, b) => b.date.localeCompare(a.date));
+
 for (const post of posts) {
     const fullHtml = generateHtml(post, posts);
     fs.writeFileSync(path.join(publicDir, post.filename), fullHtml);
@@ -479,11 +550,20 @@ if (posts.length > 0) {
     console.log('No posts found to build.');
 }
 
-// Check for weather data and generate weather.html
+// 2. Compile Weather Page
 const weatherDataPath = path.join(__dirname, 'weather_data.json');
 if (fs.existsSync(weatherDataPath)) {
     const weatherData = JSON.parse(fs.readFileSync(weatherDataPath, 'utf-8'));
     const weatherHtml = generateWeatherHtml(weatherData);
     fs.writeFileSync(path.join(publicDir, 'weather.html'), weatherHtml);
     console.log('Successfully built weather.html in /public directory.');
+}
+
+// 3. Compile Schedule Page
+const configPath = path.join(__dirname, 'config.json');
+if (fs.existsSync(configPath)) {
+    const configData = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+    const scheduleHtml = generateScheduleHtml(configData);
+    fs.writeFileSync(path.join(publicDir, 'schedule.html'), scheduleHtml);
+    console.log('Successfully built schedule.html in /public directory.');
 }

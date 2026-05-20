@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const locationFilePath = path.join(__dirname, 'location.json');
-const locationData = JSON.parse(fs.readFileSync(locationFilePath, 'utf-8'));
+const locationFilePath = path.join(__dirname, 'config.json');
+const configData = JSON.parse(fs.readFileSync(locationFilePath, 'utf-8'));
+const locationData = configData.weather_settings;
 const currentLocation = locationData.current_location;
 const coords = locationData.locations[currentLocation];
 

@@ -64,7 +64,7 @@
         padding: 2rem 1rem;
     }
 
-        .container { display: flex; flex-direction: column; gap: 2rem; }
+        .container-main { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; margin: 0 auto; padding: 2rem 1rem;}
         .main-content {
             background-color: var(--content-bg);
             padding: 30px;
@@ -113,15 +113,18 @@
     </style>
 </head>
 <body>
+    
     <nav class="nav-bar">
         <a href="index.html">Daily News</a>
         <a href="weather.html">Daily Forecast</a>
+        <a href="schedule.html">Weekly Schedule</a>
     </nav>
+
     <header class="header-banner">
         <h1>Optimized Daily News</h1>
         <p>2026-05-18</p>
     </header>
-    <div class="container">
+    <div class="container-main">
         <main class="main-content">
             <h2>National Headlines</h2>
 <ul>
