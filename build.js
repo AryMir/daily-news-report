@@ -383,8 +383,26 @@ const generateScheduleHtml = (config) => {
 
     let scheduleRows = '';
     
-    if (Object.keys(calendarData).length > 0) {
-        for (const [day, events] of Object.entries(calendarData)) {
+    const nowStr = new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
+    const todayMidnight = new Date(nowStr);
+    todayMidnight.setHours(0, 0, 0, 0);
+
+    const filteredEntries = Object.entries(calendarData).filter(([day, events]) => {
+        const dateMatch = day.match(/,\s*(.*)$/);
+        if (dateMatch) {
+            let d = new Date(`${dateMatch[1]}, ${todayMidnight.getFullYear()}`);
+            if (todayMidnight.getMonth() === 11 && d.getMonth() === 0) {
+                d.setFullYear(todayMidnight.getFullYear() + 1);
+            } else if (todayMidnight.getMonth() === 0 && d.getMonth() === 11) {
+                d.setFullYear(todayMidnight.getFullYear() - 1);
+            }
+            return d >= todayMidnight;
+        }
+        return true;
+    });
+
+    if (filteredEntries.length > 0) {
+        for (const [day, events] of filteredEntries) {
             let eventsHtml = '';
             if (events.length === 0) {
                 eventsHtml = `<p style="color: var(--text-muted); font-style: italic;">No community or family events scheduled.</p>`;

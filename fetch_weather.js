@@ -14,7 +14,7 @@ if (!coords) {
 
 const { lat, lon } = coords;
 
-const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max,wind_speed_10m_max,wind_direction_10m_dominant,uv_index_max,sunrise,sunset&hourly=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,wind_direction_10m,is_day&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=auto`;
+const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,wind_direction_10m,is_day&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max,wind_speed_10m_max,wind_direction_10m_dominant,uv_index_max,sunrise,sunset&hourly=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,wind_direction_10m,is_day&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=auto`;
 
 // Weather code descriptions mapping
 const weatherCodeMap = {
@@ -54,8 +54,6 @@ async function fetchWeather() {
         const todayDateStr = data.daily.time[0];
         const hourlyTimes = data.hourly.time;
         
-        // Find approximate 2PM (14:00) and 10PM (22:00) index for today
-        const dayIdx = hourlyTimes.findIndex(t => t === `${todayDateStr}T14:00`);
         const nightIdx = hourlyTimes.findIndex(t => t === `${todayDateStr}T22:00`);
 
         const getHourlyData = (idx) => ({
@@ -66,7 +64,13 @@ async function fetchWeather() {
             windDir: getDirection(data.hourly.wind_direction_10m[idx])
         });
 
-        const dayData = dayIdx >= 0 ? getHourlyData(dayIdx) : getHourlyData(14);
+        const dayData = {
+            temp: Math.round(data.current.temperature_2m),
+            condition: weatherCodeMap[data.current.weather_code] || "Unknown",
+            humidity: data.current.relative_humidity_2m,
+            windSpeed: Math.round(data.current.wind_speed_10m),
+            windDir: getDirection(data.current.wind_direction_10m)
+        };
         const nightData = nightIdx >= 0 ? getHourlyData(nightIdx) : getHourlyData(22);
 
         const formatTime = (isoString) => {
