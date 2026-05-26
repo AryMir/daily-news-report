@@ -8,14 +8,14 @@
     "day": {
       "temp": 89,
       "condition": "Clear sky",
-      "humidity": 15,
+      "humidity": 14,
       "windSpeed": 23,
       "windDir": "SW"
     },
     "night": {
       "temp": 64,
       "condition": "Clear sky",
-      "humidity": 41,
+      "humidity": 42,
       "windSpeed": 22,
       "windDir": "SW"
     },
