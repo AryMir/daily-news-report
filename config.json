@@ -1,0 +1,15 @@
+{
+  "weather_settings": {
+    "current_location": "Henderson",
+    "locations": {
+      "Henderson": { "zip": "89044", "lat": 35.9784, "lon": -115.1011 },
+      "Park City": { "zip": "84060", "lat": 40.6461, "lon": -111.4980 }
+    }
+  },
+  "security_settings": {
+    "master_passcode": "0145"
+  },
+  "timezone_settings": {
+    "timezone": "America/Los_Angeles"
+  }
+}
