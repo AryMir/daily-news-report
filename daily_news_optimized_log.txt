@@ -2442,3 +2442,41 @@ The remote server returned an error: (400) Bad Request.
 Windows PowerShell transcript end
 End time: 20260526130834
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260526132127
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 34324
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (429) Too Many Requests."
+âŒ Error calling Gemini API:
+The remote server returned an error: (429) Too Many Requests.
+**********************
+Windows PowerShell transcript end
+End time: 20260526132137
+**********************

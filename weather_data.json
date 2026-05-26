@@ -9,7 +9,7 @@
       "temp": 89,
       "condition": "Clear sky",
       "humidity": 14,
-      "windSpeed": 23,
+      "windSpeed": 25,
       "windDir": "SW"
     },
     "night": {
@@ -25,8 +25,8 @@
   "forecast": [
     {
       "dayName": "27 Wed",
-      "high": 78,
-      "low": 54,
+      "high": 80,
+      "low": 53,
       "condition": "Clear sky",
       "precipChance": 3,
       "windSpeed": 23,
@@ -35,7 +35,7 @@
     {
       "dayName": "28 Thu",
       "high": 80,
-      "low": 53,
+      "low": 50,
       "condition": "Overcast",
       "precipChance": 0,
       "windSpeed": 21,
