@@ -6,9 +6,9 @@
     "sunset": "7:47 PM",
     "uvIndex": null,
     "day": {
-      "temp": 76,
+      "temp": 77,
       "condition": "Clear sky",
-      "humidity": 26,
+      "humidity": 25,
       "windSpeed": 17,
       "windDir": "SW"
     },
@@ -16,7 +16,7 @@
       "temp": 64,
       "condition": "Clear sky",
       "humidity": 43,
-      "windSpeed": 20,
+      "windSpeed": 21,
       "windDir": "SW"
     },
     "high": 88,
@@ -29,7 +29,7 @@
       "low": 54,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 20,
+      "windSpeed": 23,
       "windDir": "SW"
     },
     {
