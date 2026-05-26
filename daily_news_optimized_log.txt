@@ -1,0 +1,2328 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260501083033
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 44480
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (503) Server Unavailable."
+âŒ Error calling Gemini API:
+The remote server returned an error: (503) Server Unavailable.
+**********************
+Windows PowerShell transcript end
+End time: 20260501083051
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260501083200
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 18736
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260501083252
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260502064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 18528
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (503) Server Unavailable."
+âŒ Error calling Gemini API:
+The remote server returned an error: (503) Server Unavailable.
+**********************
+Windows PowerShell transcript end
+End time: 20260502064542
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260502095332
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 38388
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (503) Server Unavailable."
+âŒ Error calling Gemini API:
+The remote server returned an error: (503) Server Unavailable.
+**********************
+Windows PowerShell transcript end
+End time: 20260502095359
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260502095522
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 44468
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (503) Server Unavailable."
+âŒ Error calling Gemini API:
+The remote server returned an error: (503) Server Unavailable.
+**********************
+Windows PowerShell transcript end
+End time: 20260502095536
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260502095734
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1 
+Process ID: 17716
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (503) Server Unavailable."
+âŒ Error calling Gemini API:
+The remote server returned an error: (503) Server Unavailable.
+**********************
+Windows PowerShell transcript end
+End time: 20260502095751
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260502100234
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 25456
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260502100336
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260503064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 44516
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260503064610
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260504064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 37612
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260504064641
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260505064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 9664
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260505064626
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260506064501
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 34316
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260506064649
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260507064501
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 42020
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260507064650
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260508064501
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 32128
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260508064643
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260508090731
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\master_news_automation_optimized.ps1
+Process ID: 38124
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260508090900
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260508091112
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\master_news_automation_optimized.ps1
+Process ID: 49492
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260508091242
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260509064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 15816
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260509064648
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260510064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 26308
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260510064623
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260511064501
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 31004
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260511064931
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260512064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 10580
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (503) Server Unavailable."
+âŒ Error calling Gemini API:
+The remote server returned an error: (503) Server Unavailable.
+**********************
+Windows PowerShell transcript end
+End time: 20260512064514
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260512070040
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 42584
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (503) Server Unavailable."
+âŒ Error calling Gemini API:
+The remote server returned an error: (503) Server Unavailable.
+**********************
+Windows PowerShell transcript end
+End time: 20260512070252
+**********************
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260512070204
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1 
+Process ID: 13160
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+**********************
+Windows PowerShell transcript start
+Start time: 20260512070747
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 30620
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+**********************
+Windows PowerShell transcript start
+Start time: 20260512070947
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 38204
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (404) Not Found."
+âŒ Error calling Gemini API:
+The remote server returned an error: (404) Not Found.
+**********************
+Windows PowerShell transcript end
+End time: 20260512070958
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260512071058
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 7908
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+Asking Gemini to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260512071138
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260512072744
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File c:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 29636
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260512072829
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260513064501
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 43020
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260513064558
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260513083728
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1 
+Process ID: 19804
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260513083809
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260513185650
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1 
+Process ID: 31316
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260513185721
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260513185910
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1 
+Process ID: 50584
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260513185946
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260514064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 45844
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260514064538
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260515064501
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 46884
+PSVersion: 5.1.26100.8283
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8283
+BuildVersion: 10.0.26100.8283
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260515064554
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260516064503
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 31980
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260516064539
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260517064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 30620
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260517064540
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260518064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 37772
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260518064536
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260518154433
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File c:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 18760
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (400) Bad Request."
+âŒ Error calling Gemini API:
+The remote server returned an error: (400) Bad Request.
+**********************
+Windows PowerShell transcript end
+End time: 20260518154444
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260518154522
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File c:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 32928
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-18.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260518154610
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260519064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 31604
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+[Trace] Failed to query models, using default: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+âŒ Error calling Gemini API:
+The remote server returned an error: (403) Forbidden.
+**********************
+Windows PowerShell transcript end
+End time: 20260519064513
+**********************
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260519064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\run_daily.ps1
+Process ID: 31000
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+[Trace] Failed to query models, using default: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+âŒ Error calling Gemini API:
+The remote server returned an error: (403) Forbidden.
+**********************
+Windows PowerShell transcript end
+End time: 20260519064513
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260519071041
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 9712
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+[Trace] Failed to query models, using default: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+âŒ Error calling Gemini API:
+The remote server returned an error: (403) Forbidden.
+**********************
+Windows PowerShell transcript end
+End time: 20260519071052
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260519071207
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\run_daily.ps1
+Process ID: 33620
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+[Trace] Failed to query models, using default: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+âŒ Error calling Gemini API:
+The remote server returned an error: (403) Forbidden.
+**********************
+Windows PowerShell transcript end
+End time: 20260519071218
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260519072409
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1 
+Process ID: 31564
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+[Trace] Failed to query models, using default: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+âŒ Error calling Gemini API:
+The remote server returned an error: (403) Forbidden.
+**********************
+Windows PowerShell transcript end
+End time: 20260519072420
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260519072737
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: powershell -Command .\run_daily.ps1
+Process ID: 41660
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+[Trace] Failed to query models, using default: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+âŒ Error calling Gemini API:
+The remote server returned an error: (403) Forbidden.
+**********************
+Windows PowerShell transcript end
+End time: 20260519072747
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260519073538
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: powershell -Command git rm --cached "GitHub Personal Access Token for Da.txt"
+git add .gitignore
+git commit --amend --no-edit
+git push origin main
+.\run_daily.ps1
+Process ID: 42644
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+[Trace] Failed to query models, using default: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+âŒ Error calling Gemini API:
+The remote server returned an error: (403) Forbidden.
+**********************
+Windows PowerShell transcript end
+End time: 20260519073549
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260519074719
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: powershell -Command .\run_daily.ps1
+Process ID: 41548
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+[Trace] Failed to query models, using default: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+âŒ Error calling Gemini API:
+The remote server returned an error: (403) Forbidden.
+**********************
+Windows PowerShell transcript end
+End time: 20260519074730
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260519075302
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: powershell -Command .\run_daily.ps1
+Process ID: 3216
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-19.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260519075353
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260519193211
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: powershell -Command .\run_daily.ps1
+Process ID: 12640
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-19.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260519193259
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260520064503
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\master_news_automation_optimized.ps1
+Process ID: 14788
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-20.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260520064549
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260520064503
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\run_daily.ps1
+Process ID: 2752
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-20.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260520064550
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260521064503
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\run_daily.ps1
+Process ID: 3692
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-21.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260521064552
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260522064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\run_daily.ps1
+Process ID: 4072
+PSVersion: 5.1.26100.8474
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8474
+BuildVersion: 10.0.26100.8474
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-22.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260522064551
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260523064504
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\run_daily.ps1
+Process ID: 4996
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-23.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260523064547
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260524064503
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\run_daily.ps1
+Process ID: 9520
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-24.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260524064543
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260524101413
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: powershell -Command .\run_daily.ps1
+Process ID: 37360
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-24.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260524101457
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260525064503
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\run_daily.ps1
+Process ID: 30236
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-25.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260525064545
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260526064502
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: PowerShell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File C:\Antigravity\Daily_News_Project\run_daily.ps1
+Process ID: 39696
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-26.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260526064547
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260526073830
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: powershell -Command .\run_daily.ps1
+Process ID: 23052
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-26.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260526073920
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260526081036
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\run_daily.ps1 
+Process ID: 44608
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-26.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260526081123
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260526081611
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\run_daily.ps1 
+Process ID: 17764
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-26.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260526081658
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260526084510
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\run_daily.ps1 
+Process ID: 5976
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-26.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260526084601
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260526084900
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 19236
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-26.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260526084946
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260526085225
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 19236
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-pro
+Asking Gemini (gemini-2.5-pro) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-26.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260526085310
+**********************
