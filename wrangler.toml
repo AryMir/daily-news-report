@@ -1,5 +1,0 @@
-name = "daily-news-report"
-compatibility_date = "2026-05-18"
-
-[assets]
-directory = "./public"
