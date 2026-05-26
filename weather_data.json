@@ -4,22 +4,22 @@
     "date": "Tuesday, May 26",
     "sunrise": "5:27 AM",
     "sunset": "7:47 PM",
-    "uvIndex": null,
+    "uvIndex": 8.45,
     "day": {
-      "temp": 78,
+      "temp": 88,
       "condition": "Clear sky",
-      "humidity": 23,
-      "windSpeed": 21,
+      "humidity": 16,
+      "windSpeed": 22,
       "windDir": "SW"
     },
     "night": {
-      "temp": 65,
+      "temp": 64,
       "condition": "Clear sky",
-      "humidity": 44,
-      "windSpeed": 23,
+      "humidity": 41,
+      "windSpeed": 22,
       "windDir": "SW"
     },
-    "high": 88,
+    "high": 89,
     "low": 62
   },
   "forecast": [
@@ -28,53 +28,53 @@
       "high": 78,
       "low": 54,
       "condition": "Clear sky",
-      "precipChance": 0,
-      "windSpeed": 22,
+      "precipChance": 3,
+      "windSpeed": 23,
       "windDir": "SW"
     },
     {
       "dayName": "28 Thu",
       "high": 80,
       "low": 53,
-      "condition": "Mainly clear",
+      "condition": "Overcast",
       "precipChance": 0,
-      "windSpeed": 15,
-      "windDir": "SW"
+      "windSpeed": 21,
+      "windDir": "S"
     },
     {
       "dayName": "29 Fri",
-      "high": 81,
-      "low": 62,
-      "condition": "Mainly clear",
-      "precipChance": 0,
-      "windSpeed": 10,
+      "high": 77,
+      "low": 57,
+      "condition": "Overcast",
+      "precipChance": 1,
+      "windSpeed": 13,
       "windDir": "SW"
     },
     {
       "dayName": "30 Sat",
       "high": 88,
-      "low": 68,
+      "low": 66,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 5,
-      "windDir": "S"
+      "windSpeed": 19,
+      "windDir": "SW"
     },
     {
       "dayName": "31 Sun",
-      "high": 94,
-      "low": 72,
+      "high": 92,
+      "low": 69,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 13,
+      "windSpeed": 22,
       "windDir": "SW"
     },
     {
       "dayName": "1 Mon",
       "high": 97,
-      "low": 74,
-      "condition": "Mainly clear",
-      "precipChance": 0,
-      "windSpeed": 10,
+      "low": 72,
+      "condition": "Overcast",
+      "precipChance": 1,
+      "windSpeed": 14,
       "windDir": "SW"
     }
   ]
