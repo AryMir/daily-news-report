@@ -328,7 +328,7 @@ const generateWeatherHtml = (data) => {
                         <div class="icon-large">${getIcon(today.day.condition)}</div>
                     </div>
                     <div class="desc-text">
-                        <strong>${today.day.condition}</strong><br>
+                        Current Conditions: ${today.day.temp}&deg;F and ${today.day.condition}.<br>
                         High near ${today.high}&deg;F.<br>
                         Wind ${today.day.windSpeed} mph ${today.day.windDir}.
                     </div>
