@@ -74,7 +74,7 @@ $Headers = @{
 
 Write-Host "[Trace] Checking for active Gemini models..."
 $ModelsUrl = "https://generativelanguage.googleapis.com/v1beta/models?key=$ApiKey"
-$ActiveModel = "gemini-2.5-pro" # Default fallback
+$ActiveModel = "gemini-2.5-flash" # Default fallback
 try {
     $ModelsResponse = Invoke-RestMethod -Uri $ModelsUrl -Method Get
     $AvailableModels = $ModelsResponse.models.name | ForEach-Object { $_ -replace "^models/", "" }
