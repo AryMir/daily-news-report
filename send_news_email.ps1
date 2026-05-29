@@ -5,7 +5,7 @@ param(
 )
 
 $SenderEmail = "arymir@gmail.com"
-$AppPassword = "ojcrtnqtoqlcfzuk"
+$AppPassword = "ggrggqdhokophtkz"
 
 if (-not $SenderEmail -or -not $AppPassword -or $AppPassword -eq "your_16_character_app_password") {
     Write-Host "Error: Please set GMAIL_SENDER and GMAIL_APP_PASSWORD correctly." -ForegroundColor Red
@@ -38,6 +38,7 @@ $MailMessage.IsBodyHtml = $true
 $MailMessage.Body = $HtmlContent
 $MailMessage.BodyEncoding = [System.Text.Encoding]::UTF8
 
+Write-Host "EMAIL SCRIPT VERSION: Ary Gmail SMTP v2 - $(Get-Date)" -ForegroundColor Cyan
 Write-Host "Connecting to Gmail SMTP server and sending email..." -ForegroundColor Cyan
 
 try {
