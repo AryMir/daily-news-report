@@ -3029,3 +3029,44 @@ Connecting to Gmail SMTP server and sending email...
 Windows PowerShell transcript end
 End time: 20260528212702
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260529081349
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\run_daily.ps1
+Process ID: 14100
+PSVersion: 5.1.26100.8491
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8491
+BuildVersion: 10.0.26100.8491
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt
+Waiting 10 seconds for network to initialize...
+==============================================
+   Antigravity Daily News Automator (Wife's Version)
+==============================================
+[Trace] Reading Optimized prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting to JSON...
+[Trace] Setting up API call...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-flash
+Asking Gemini (gemini-2.5-flash) to research and compile the optimized news... (this takes about 15-30 seconds)
+âœ… Successfully saved Markdown to C:\Antigravity\Daily_News_Project\content\2026-05-29.md
+âœ… Successfully generated HTML report via Gemini!
+Calling email script to send to inbox...
+EMAIL SCRIPT VERSION: Ary Gmail SMTP v2 - 05/29/2026 08:14:30
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+**********************
+Windows PowerShell transcript end
+End time: 20260529081431
+**********************

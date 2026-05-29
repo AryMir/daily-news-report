@@ -1,81 +1,81 @@
 {
   "today": {
     "location": "Henderson",
-    "date": "Thursday, May 28",
+    "date": "Friday, May 29",
     "sunrise": "5:26 AM",
-    "sunset": "7:48 PM",
+    "sunset": "7:49 PM",
     "uvIndex": 8.4,
     "day": {
-      "temp": 66,
+      "temp": 62,
       "condition": "Clear sky",
-      "humidity": 12,
-      "windSpeed": 9,
+      "humidity": 43,
+      "windSpeed": 17,
       "windDir": "SW"
     },
     "night": {
-      "temp": 65,
+      "temp": 68,
       "condition": "Clear sky",
-      "humidity": 15,
-      "windSpeed": 9,
+      "humidity": 24,
+      "windSpeed": 11,
       "windDir": "S"
     },
-    "high": 79,
-    "low": 54
+    "high": 78,
+    "low": 59
   },
   "forecast": [
     {
-      "dayName": "29 Fri",
-      "high": 77,
-      "low": 55,
-      "condition": "Overcast",
-      "precipChance": 3,
-      "windSpeed": 19,
-      "windDir": "SW"
-    },
-    {
       "dayName": "30 Sat",
       "high": 88,
-      "low": 61,
+      "low": 62,
       "condition": "Clear sky",
-      "precipChance": 1,
-      "windSpeed": 18,
+      "precipChance": 2,
+      "windSpeed": 15,
       "windDir": "SW"
     },
     {
       "dayName": "31 Sun",
-      "high": 90,
-      "low": 72,
+      "high": 91,
+      "low": 71,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 8,
-      "windDir": "NW"
+      "windSpeed": 11,
+      "windDir": "SE"
     },
     {
       "dayName": "1 Mon",
-      "high": 98,
-      "low": 78,
-      "condition": "Overcast",
-      "precipChance": 3,
-      "windSpeed": 17,
+      "high": 97,
+      "low": 77,
+      "condition": "Clear sky",
+      "precipChance": 0,
+      "windSpeed": 20,
       "windDir": "S"
     },
     {
       "dayName": "2 Tue",
-      "high": 100,
+      "high": 98,
       "low": 77,
-      "condition": "Clear sky",
+      "condition": "Overcast",
       "precipChance": 0,
       "windSpeed": 18,
       "windDir": "S"
     },
     {
       "dayName": "3 Wed",
-      "high": 102,
-      "low": 80,
+      "high": 99,
+      "low": 77,
       "condition": "Overcast",
       "precipChance": 0,
-      "windSpeed": 20,
+      "windSpeed": 21,
       "windDir": "SW"
+    },
+    {
+      "dayName": "4 Thu",
+      "high": 99,
+      "low": 78,
+      "condition": "Clear sky",
+      "precipChance": 0,
+      "windSpeed": 23,
+      "windDir": "S"
     }
   ]
 }
