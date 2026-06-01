@@ -108,3 +108,152 @@ Run finished: 05/28/2026 20:46:26
 Windows PowerShell transcript end
 End time: 20260528204626
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260601065406
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\master_news_automation.ps1 
+Process ID: 31220
+PSVersion: 5.1.26100.8544
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8544
+BuildVersion: 10.0.26100.8544
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\logs\daily_news_log.txt
+==============================================
+   Antigravity Daily News Automator Started
+==============================================
+Run started: 06/01/2026 06:54:06
+Running as user: AryMi
+Project folder: C:\Antigravity\Daily_News_Project
+
+Waiting 10 seconds for network to initialize...
+[Trace] Loading .env file...
+[Trace] Gemini API key loaded. Length: 39
+[Trace] Using prompt file: C:\Antigravity\Daily_News_Project\Daily News Report Optimized.txt
+[Trace] Using email script: C:\Antigravity\Daily_News_Project\send_news_email.ps1
+[Trace] Reading prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting JSON...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-flash
+Asking Gemini (gemini-2.5-flash) to research and compile the news...
+This may take 15 to 60 seconds.
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (503) Server Unavailable."
+ERROR: Gemini API call failed.
+The remote server returned an error: (503) Server Unavailable.
+**********************
+Windows PowerShell transcript end
+End time: 20260601065440
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260601065522
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\master_news_automation.ps1 
+Process ID: 23740
+PSVersion: 5.1.26100.8544
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8544
+BuildVersion: 10.0.26100.8544
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\logs\daily_news_log.txt
+==============================================
+   Antigravity Daily News Automator Started
+==============================================
+Run started: 06/01/2026 06:55:22
+Running as user: AryMi
+Project folder: C:\Antigravity\Daily_News_Project
+
+Waiting 10 seconds for network to initialize...
+[Trace] Loading .env file...
+[Trace] Gemini API key loaded. Length: 39
+[Trace] Using prompt file: C:\Antigravity\Daily_News_Project\Daily News Report Optimized.txt
+[Trace] Using email script: C:\Antigravity\Daily_News_Project\send_news_email.ps1
+[Trace] Reading prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting JSON...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-flash
+Asking Gemini (gemini-2.5-flash) to research and compile the news...
+This may take 15 to 60 seconds.
+SUCCESS: Optimized-style HTML email report generated.
+Saved temporary HTML to: C:\Users\AryMi\AppData\Local\Temp\daily_news_report.html
+Saved temporary Markdown to: C:\Users\AryMi\AppData\Local\Temp\daily_news_report.md
+Calling email script to send the report...
+Testing mode: BCC list is disabled.
+EMAIL SCRIPT VERSION: Ary Gmail SMTP v2 - 06/01/2026 06:56:01
+Connecting to Gmail SMTP server and sending email...
+âœ… Email sent successfully!
+SUCCESS: Email script completed.
+
+==============================================
+   Antigravity Daily News Automator Finished
+==============================================
+Run finished: 06/01/2026 06:56:03
+**********************
+Windows PowerShell transcript end
+End time: 20260601065603
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260601065729
+Username: ARYMIR-DESKTOP\AryMi
+RunAs User: ARYMIR-DESKTOP\AryMi
+Configuration Name: 
+Machine: ARYMIR-DESKTOP (Microsoft Windows NT 10.0.26220.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Antigravity\Daily_News_Project\master_news_automation.ps1 
+Process ID: 42924
+PSVersion: 5.1.26100.8544
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8544
+BuildVersion: 10.0.26100.8544
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Antigravity\Daily_News_Project\logs\daily_news_log.txt
+==============================================
+   Antigravity Daily News Automator Started
+==============================================
+Run started: 06/01/2026 06:57:29
+Running as user: AryMi
+Project folder: C:\Antigravity\Daily_News_Project
+
+Waiting 10 seconds for network to initialize...
+[Trace] Loading .env file...
+[Trace] Gemini API key loaded. Length: 39
+[Trace] Using prompt file: C:\Antigravity\Daily_News_Project\Daily News Report Optimized.txt
+[Trace] Using email script: C:\Antigravity\Daily_News_Project\send_news_email.ps1
+[Trace] Reading prompt file...
+[Trace] Building user prompt...
+[Trace] Building JSON object...
+[Trace] Converting JSON...
+[Trace] Checking for active Gemini models...
+[Trace] Dynamically selected model: gemini-2.5-flash
+Asking Gemini (gemini-2.5-flash) to research and compile the news...
+This may take 15 to 60 seconds.
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (503) Server Unavailable."
+ERROR: Gemini API call failed.
+The remote server returned an error: (503) Server Unavailable.
+**********************
+Windows PowerShell transcript end
+End time: 20260601065741
+**********************
