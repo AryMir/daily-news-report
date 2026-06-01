@@ -43,17 +43,17 @@ foreach ($Candidate in $PromptFileCandidates) {
 # Testing mode: BCC disabled
 # Add BCC emails back later after testing succeeds
 # ------------------------------------------------------------
-# $BccList = @()
+$BccList = @()
 
 # Original BCC list, temporarily disabled:
-$BccList = @(
-    "linetskysemyon@yahoo.com",
-    "annamir4u@gmail.com",
-    "easyalinsincity@gmail.com",
-    "joni.w46@yahoo.com",
-    "gloriaoliver2429@gmail.com",
-    "wilkrom@cox.net"
-)
+# $BccList = @(
+#     "linetskysemyon@yahoo.com",
+#     "annamir4u@gmail.com",
+#     "easyalinsincity@gmail.com",
+#     "joni.w46@yahoo.com",
+#     "gloriaoliver2429@gmail.com",
+#     "wilkrom@cox.net"
+# )
 
 # ------------------------------------------------------------
 # Ensure log folder exists
