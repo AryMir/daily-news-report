@@ -6,16 +6,16 @@
     "sunset": "7:52 PM",
     "uvIndex": 8.6,
     "day": {
-      "temp": 80,
+      "temp": 94,
       "condition": "Clear sky",
-      "humidity": 21,
-      "windSpeed": 7,
-      "windDir": "SW"
+      "humidity": 10,
+      "windSpeed": 8,
+      "windDir": "SE"
     },
     "night": {
       "temp": 84,
       "condition": "Clear sky",
-      "humidity": 10,
+      "humidity": 9,
       "windSpeed": 11,
       "windDir": "S"
     },
@@ -29,7 +29,7 @@
       "low": 76,
       "condition": "Overcast",
       "precipChance": 0,
-      "windSpeed": 20,
+      "windSpeed": 17,
       "windDir": "SW"
     },
     {
@@ -47,7 +47,7 @@
       "low": 79,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 24,
+      "windSpeed": 22,
       "windDir": "SW"
     },
     {
@@ -56,25 +56,25 @@
       "low": 78,
       "condition": "Overcast",
       "precipChance": 0,
-      "windSpeed": 24,
+      "windSpeed": 26,
       "windDir": "SW"
     },
     {
       "dayName": "7 Sun",
-      "high": 97,
-      "low": 73,
-      "condition": "Overcast",
-      "precipChance": 0,
-      "windSpeed": 22,
-      "windDir": "S"
-    },
-    {
-      "dayName": "8 Mon",
-      "high": 97,
+      "high": 95,
       "low": 74,
       "condition": "Overcast",
       "precipChance": 0,
-      "windSpeed": 19,
+      "windSpeed": 23,
+      "windDir": "SW"
+    },
+    {
+      "dayName": "8 Mon",
+      "high": 95,
+      "low": 72,
+      "condition": "Partly cloudy",
+      "precipChance": 1,
+      "windSpeed": 25,
       "windDir": "S"
     }
   ]
