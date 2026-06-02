@@ -7,15 +7,15 @@
     "uvIndex": 8.6,
     "day": {
       "temp": 97,
-      "condition": "Overcast",
-      "humidity": 8,
-      "windSpeed": 11,
+      "condition": "Partly cloudy",
+      "humidity": 7,
+      "windSpeed": 10,
       "windDir": "SE"
     },
     "night": {
       "temp": 83,
       "condition": "Clear sky",
-      "humidity": 9,
+      "humidity": 10,
       "windSpeed": 11,
       "windDir": "S"
     },
