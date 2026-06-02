@@ -1,4 +1,4 @@
-﻿$EnvFilePath = "C:\Antigravity\Daily_News_Project\.env"
+$EnvFilePath = "C:\Antigravity\Daily_News_Project\.env"
 if (Test-Path $EnvFilePath) {
     Get-Content $EnvFilePath | Where-Object { $_ -match '=' } | ForEach-Object {
         $name, $value = $_ -split '=', 2
@@ -44,17 +44,6 @@ if (-not (Test-Path $PromptFile)) {
     Write-Host "Error: Could not find prompt file at $PromptFile" -ForegroundColor Red
     exit 1
 }
-Write-Host "Refreshing calendar_data.json from Next_Week_Schedule..." -ForegroundColor Cyan
-Push-Location "C:\Antigravity\Next_Week_Schedule"
-node .\generate_report.js > "$env:TEMP\calendar_report_for_daily_news.html"
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "ERROR: Failed to refresh calendar_data.json." -ForegroundColor Red
-    Pop-Location
-    Stop-Transcript
-    exit 1
-}
-Pop-Location
-Write-Host "calendar_data.json refreshed successfully." -ForegroundColor Green
 Write-Host "[Trace] Reading Optimized prompt file..."
 
 $SystemPrompt = [string](Get-Content -Path $PromptFile -Raw -Encoding UTF8)
@@ -166,27 +155,18 @@ type: "news"
     
     $FinalMarkdown = $FrontMatter + $MarkdownContent
     Set-Content -Path $MarkdownFile -Value $FinalMarkdown -Encoding UTF8
-    Write-Host "âœ… Successfully saved Markdown to $MarkdownFile" -ForegroundColor Green
+    Write-Host "✅ Successfully saved Markdown to $MarkdownFile" -ForegroundColor Green
     
     # Save the HTML to a temporary file
     Set-Content -Path $TempHtml -Value $HtmlContent -Encoding UTF8
-    Write-Host "âœ… Successfully generated HTML report via Gemini!" -ForegroundColor Green
+    Write-Host "✅ Successfully generated HTML report via Gemini!" -ForegroundColor Green
     
     # Call the email script
-Write-Host "Rebuilding website pages with fresh calendar data..." -ForegroundColor Cyan
-cd C:\Antigravity\Daily_News_Project
-node .\build.js
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "ERROR: Website rebuild failed." -ForegroundColor Red
-    Stop-Transcript
-    exit 1
-}
-Write-Host "Website rebuilt successfully." -ForegroundColor Green
     Write-Host "Calling email script to send to inbox..." -ForegroundColor Yellow
     & $EmailScript -HtmlFilePath $TempHtml -BccEmails $BccList
 }
 catch {
-    Write-Host "âŒ Error calling Gemini API:" -ForegroundColor Red
+    Write-Host "❌ Error calling Gemini API:" -ForegroundColor Red
     if ($_.ErrorDetails) {
         Write-Host $_.ErrorDetails.Message -ForegroundColor Red
     }
