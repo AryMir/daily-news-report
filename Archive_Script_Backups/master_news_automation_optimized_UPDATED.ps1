@@ -173,6 +173,15 @@ type: "news"
     Write-Host "âœ… Successfully generated HTML report via Gemini!" -ForegroundColor Green
     
     # Call the email script
+Write-Host "Rebuilding website pages with fresh calendar data..." -ForegroundColor Cyan
+cd C:\Antigravity\Daily_News_Project
+node .\build.js
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "ERROR: Website rebuild failed." -ForegroundColor Red
+    Stop-Transcript
+    exit 1
+}
+Write-Host "Website rebuilt successfully." -ForegroundColor Green
     Write-Host "Calling email script to send to inbox..." -ForegroundColor Yellow
     & $EmailScript -HtmlFilePath $TempHtml -BccEmails $BccList
 }
