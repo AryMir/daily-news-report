@@ -6,11 +6,11 @@
     "sunset": "7:52 PM",
     "uvIndex": 8.6,
     "day": {
-      "temp": 97,
+      "temp": 98,
       "condition": "Partly cloudy",
       "humidity": 7,
-      "windSpeed": 10,
-      "windDir": "SE"
+      "windSpeed": 7,
+      "windDir": "NE"
     },
     "night": {
       "temp": 83,
