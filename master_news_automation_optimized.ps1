@@ -18,17 +18,17 @@ $LogFile = "C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt"
 
 # Add BCC email addresses here tomorrow (e.g., @("friend1@example.com", "friend2@example.com"))
 # Testing mode / temporary: no BCC recipients
-$BccList = @()
+# $BccList = @()
 
 # Original BCC list, temporarily disabled:
-# $BccList = @(
-#     "linetskysemyon@yahoo.com",
-#     "annamir4u@gmail.com",
-#     "easyalinsincity@gmail.com",
-#     "joni.w46@yahoo.com",
-#     "gloriaoliver2429@gmail.com",
-#     "wilkrom@cox.net"
-# )
+$BccList = @(
+    "linetskysemyon@yahoo.com",
+    # "annamir4u@gmail.com",
+    "easyalinsincity@gmail.com",
+    "joni.w46@yahoo.com",
+    "gloriaoliver2429@gmail.com",
+    "wilkrom@cox.net"
+)
 
 Start-Transcript -Path $LogFile -Append
 
