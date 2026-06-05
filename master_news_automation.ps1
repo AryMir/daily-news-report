@@ -48,7 +48,7 @@ foreach ($Candidate in $PromptFileCandidates) {
 # Original BCC list, temporarily disabled:
 $BccList = @(
     "linetskysemyon@yahoo.com",
-    # "annamir4u@gmail.com",
+    "annamir4u@gmail.com",
     "easyalinsincity@gmail.com",
     "joni.w46@yahoo.com",
     "gloriaoliver2429@gmail.com",
