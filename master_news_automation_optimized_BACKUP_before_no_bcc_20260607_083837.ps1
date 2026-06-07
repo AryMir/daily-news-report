@@ -21,7 +21,14 @@ $LogFile = "C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt"
 # $BccList = @()
 
 # Original BCC list, temporarily disabled:
-$BccList = @()
+$BccList = @(
+    "linetskysemyon@yahoo.com",
+    "annamir4u@gmail.com",
+    "easyalinsincity@gmail.com",
+    "joni.w46@yahoo.com",
+    "gloriaoliver2429@gmail.com",
+    "wilkrom@cox.net"
+)
 
 Start-Transcript -Path $LogFile -Append
 
@@ -228,8 +235,5 @@ Set-Content -Path $TempHtml -Value $HtmlContent -Encoding UTF8
 Write-Host "Successfully generated HTML report via Gemini model: $SuccessfulModel" -ForegroundColor Green
 # Call the email script
 Write-Host "Calling email script to send to inbox..." -ForegroundColor Yellow
-& $EmailScript -HtmlFilePath $TempHtml -BccEmails $BccList
-
-Stop-Transcript
-
+& $EmailScript -HtmlFilePath $TempHtml -BccEmails $BccListStop-Transcript
 
