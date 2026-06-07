@@ -4,3 +4,6 @@ credentials.json
 token.json
 daily_news_optimized_log.txt
 *.log
+
+*_BACKUP_*.ps1
+*BACKUP*.ps1
