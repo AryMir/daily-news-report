@@ -46,14 +46,40 @@ foreach ($Candidate in $PromptFileCandidates) {
 # $BccList = @()
 
 # Original BCC list, temporarily disabled:
-$BccList = @(
-    "linetskysemyon@yahoo.com",
-    "annamir4u@gmail.com",
-    "easyalinsincity@gmail.com",
-    "joni.w46@yahoo.com",
-    "gloriaoliver2429@gmail.com",
-    "wilkrom@cox.net"
-)
+# $BccList = @(
+#     "linetskysemyon@yahoo.com",
+#     "annamir4u@gmail.com",
+#     "easyalinsincity@gmail.com",
+#     "joni.w46@yahoo.com",
+#     "gloriaoliver2429@gmail.com",
+#     "wilkrom@cox.net"
+# )
+
+# Load optional BCC list from bcc_list.txt
+# First line must be YES to enable BCC sending.
+# First line NO means send only to the main recipient.
+
+$BccFile = "C:\Antigravity\Daily_News_Project\bcc_list.txt"
+$BccList = @()
+
+if (Test-Path $BccFile) {
+    $BccLines = Get-Content $BccFile | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne "" -and -not $_.StartsWith("#") }
+
+    if ($BccLines.Count -gt 0) {
+        $BccSwitch = $BccLines[0].ToUpper()
+
+        if ($BccSwitch -eq "YES") {
+            $BccList = $BccLines | Select-Object -Skip 1
+            Write-Host "BCC list is ENABLED. BCC recipients loaded: $($BccList.Count)" -ForegroundColor Yellow
+        }
+        else {
+            Write-Host "BCC list is DISABLED by bcc_list.txt. Sending only to main recipient." -ForegroundColor Yellow
+        }
+    }
+}
+else {
+    Write-Host "No bcc_list.txt found. Sending only to main recipient." -ForegroundColor Yellow
+}
 
 # ------------------------------------------------------------
 # Ensure log folder exists
