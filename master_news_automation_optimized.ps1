@@ -103,12 +103,13 @@ try {
     #     "gemini-2.5-flash",
     #     "gemini-1.5-pro-latest"
     # )
-    $PreferredModels = @(
-        "gemini-1.5-flash",
-        "gemini-1.5-pro-latest",
-        "gemini-2.0-flash",
-        "gemini-2.5-flash"
-    )
+        $PreferredModels = @(
+            "gemini-2.5-flash-lite",
+            "gemini-2.0-flash-lite",
+            "gemini-flash-lite-latest",
+            "gemini-2.0-flash",
+            "gemini-2.5-flash"
+        )
     
     foreach ($Model in $PreferredModels) {
         if ($AvailableModels -contains $Model) {
