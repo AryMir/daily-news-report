@@ -95,20 +95,14 @@ try {
     $AvailableModels = $ModelsResponse.models.name | ForEach-Object { $_ -replace "^models/", "" }
     
     # Define preferred models in order of newest to oldest
-    # $PreferredModels = @(
-    #     "gemini-4-pro",
-    #     "gemini-3.5-pro",
-    #     "gemini-3.1-pro",
-    #     "gemini-3-pro",
-    #     "gemini-2.5-flash",
-    #     "gemini-1.5-pro-latest"
-    # )
-            $PreferredModels = @(
-            "gemini-2.0-flash",
-            "gemini-1.5-flash",
-            "gemini-1.5-pro-latest",
-            "gemini-2.5-flash"
-        )
+    $PreferredModels = @(
+        "gemini-4-pro",
+        "gemini-3.5-pro",
+        "gemini-3.1-pro",
+        "gemini-3-pro",
+        "gemini-2.5-flash",
+        "gemini-1.5-pro-latest"
+    )
     
     foreach ($Model in $PreferredModels) {
         if ($AvailableModels -contains $Model) {

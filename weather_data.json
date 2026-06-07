@@ -28,7 +28,7 @@
       "high": 95,
       "low": 70,
       "condition": "Overcast",
-      "precipChance": 0,
+      "precipChance": 1,
       "windSpeed": 21,
       "windDir": "SW"
     },
