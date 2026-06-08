@@ -253,9 +253,9 @@ Write-Host "Successfully saved Markdown to $MarkdownFile" -ForegroundColor Green
 Set-Content -Path $TempHtml -Value $HtmlContent -Encoding UTF8
 Write-Host "Successfully generated HTML report via Gemini model: $SuccessfulModel" -ForegroundColor Green
 # Call the email script
-Write-Host "Calling email script to send to inbox..." -ForegroundColor Yellow
-& $EmailScript -HtmlFilePath $TempHtml -BccEmails $BccList
+Write-Host "Email sending skipped here. run_daily.ps1 will send email only after GitHub push succeeds." -ForegroundColor Yellow
 
 Stop-Transcript
+
 
 
