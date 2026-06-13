@@ -1,4 +1,4 @@
-$ErrorActionPreference = "Stop"
+﻿$ErrorActionPreference = "Stop"
 $ProjectDir = "C:\Antigravity\Daily_News_Project"
 Set-Location -Path $ProjectDir
 # Prevent scheduled task from hanging on GitHub username/password prompts.
@@ -7,15 +7,6 @@ $Date = Get-Date -Format "yyyy-MM-dd"
 $TempHtml = "$env:TEMP\daily_news_report_optimized.html"
 $EmailScript = "C:\Antigravity\Daily_News_Project\send_news_email.ps1"
 $BccFile = "C:\Antigravity\Daily_News_Project\bcc_list.txt"
-$StatusDir = "C:\Antigravity\Daily_News_Project\status"
-if (-not (Test-Path $StatusDir)) {
-    New-Item -ItemType Directory -Path $StatusDir -Force | Out-Null
-}
-$EmailSentMarker = Join-Path $StatusDir "email-sent-$Date.ok"
-if (Test-Path $EmailSentMarker) {
-    Write-Host "Today's email was already sent. Stopping to prevent duplicate email." -ForegroundColor Yellow
-    exit 0
-}
 Write-Host "Running news fetch script..."
 & .\master_news_automation_optimized.ps1
 if ($LASTEXITCODE -ne 0) {
@@ -53,7 +44,7 @@ else {
 }
 Write-Host "Pushing to GitHub with retry logic..."
 $PushSucceeded = $false
-$MaxAttempts = 5
+$MaxAttempts = 3
 for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
     Write-Host "GitHub push attempt $attempt of $MaxAttempts..."
     git push origin main
@@ -64,7 +55,7 @@ for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
     }
     Write-Host "GitHub push failed on attempt $attempt." -ForegroundColor Yellow
     if ($attempt -lt $MaxAttempts) {
-        $WaitSeconds = 30 * $attempt
+        $WaitSeconds = 15 * $attempt
         Write-Host "Waiting $WaitSeconds seconds before retry..."
         Start-Sleep -Seconds $WaitSeconds
     }
@@ -99,7 +90,4 @@ if ($LASTEXITCODE -ne 0) {
     Write-Host "ERROR: Email script failed after successful GitHub push." -ForegroundColor Red
     exit $LASTEXITCODE
 }
-New-Item -ItemType File -Path $EmailSentMarker -Force | Out-Null
 Write-Host "Daily run complete! Website updated and email sent." -ForegroundColor Green
-
-
