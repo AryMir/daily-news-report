@@ -80,7 +80,7 @@ $SystemPrompt = [string](Get-Content -Path $PromptFile -Raw -Encoding UTF8)
 Write-Host "[Trace] Building user prompt..."
 
 # We use the same formatting rules as the original, just referencing the optimized system instructions!
-$UserPrompt = 'Based on the system instructions, please perform a web search to gather today''s news, markets, and Henderson NV weather. Structure the information exactly as requested in the instructions. Provide your output in two parts separated by the exact string "|||MARKDOWN_SEPARATOR|||". Part 1 must be exclusively the beautifully styled, complete HTML document suitable for an email body (clean, modern email template style). Part 2 must be the exact same content formatted as clean Markdown for a static website. DO NOT output any conversational text or markdown code blocks for either part.'
+$UserPrompt = 'Based on the system instructions, please perform a web search to gather today''s news, markets, and Henderson NV weather. Structure the information exactly as requested in the instructions. Return raw HTML only. Do not return Markdown. Do not return a second version. Do not include conversational text, explanations, or markdown code blocks. The first character of the response must be "<".'
 Write-Host "[Trace] Building JSON object..."
 
 # Build the JSON payload for the Gemini API
@@ -216,21 +216,21 @@ if (-not $SuccessfulModel) {
 $GeneratedText = $GeneratedText -replace "^```html\s*", ""
 $GeneratedText = $GeneratedText -replace "\s*```$", ""
 $GeneratedText = $GeneratedText.Trim()
-# Parse the response using the separator
-if ($GeneratedText -match "\|\|\|MARKDOWN_SEPARATOR\|\|\|") {
-    $Parts = $GeneratedText -split "\|\|\|MARKDOWN_SEPARATOR\|\|\|"
-    $HtmlContent = $Parts[0].Trim()
-    $MarkdownContent = $Parts[1].Trim()
-    # In case the markdown part starts/ends with ```markdown ... ```
-    $MarkdownContent = $MarkdownContent -replace "^```markdown\s*", ""
-    $MarkdownContent = $MarkdownContent -replace "\s*```$", ""
-    $MarkdownContent = $MarkdownContent.Trim()
-} else {
-    # Fallback if separator is missing
-    $HtmlContent = $GeneratedText
-    $MarkdownContent = "Failed to generate Markdown cleanly."
-    Write-Host "Warning: Separator not found in response." -ForegroundColor Yellow
+# HTML-only output mode
+$HtmlContent = $GeneratedText.Trim()
+# Safety checks: stop if Gemini returned conversational text or non-HTML content.
+if ($HtmlContent -match "^\s*(I understand|Sure|Certainly|Here is|Okay|I will)") {
+    Write-Host "ERROR: Gemini returned conversational text instead of HTML." -ForegroundColor Red
+    throw "Invalid Gemini response. Stopping automation."
 }
+if ($HtmlContent -notmatch "<h1|<h2|<html|<body|Daily News Report") {
+    Write-Host "ERROR: Gemini response does not look like a Daily News HTML report." -ForegroundColor Red
+    throw "Invalid HTML report. Stopping automation."
+}
+# Create a plain-text Markdown fallback for the website content file.
+$MarkdownContent = $HtmlContent -replace "<[^>]+>", ""
+$MarkdownContent = $MarkdownContent -replace "&nbsp;", " "
+$MarkdownContent = $MarkdownContent.Trim()
 $CurrentDate = Get-Date -Format "yyyy-MM-dd"
 $ContentDir = "C:\Antigravity\Daily_News_Project\content"
 if (-not (Test-Path $ContentDir)) {
@@ -256,6 +256,9 @@ Write-Host "Successfully generated HTML report via Gemini model: $SuccessfulMode
 Write-Host "Email sending skipped here. run_daily.ps1 will send email only after GitHub push succeeds." -ForegroundColor Yellow
 
 Stop-Transcript
+
+
+
 
 
 
