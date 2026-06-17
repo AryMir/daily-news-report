@@ -20,34 +20,19 @@ Critical accuracy rules:
 * If a market is closed, say “latest available close” and give the date.
 * If you cannot verify a fact, leave it out.
 * If current web access is unavailable, stop and say: “I cannot create a reliable current Daily News Report without live web access.”
-Output requirement:
-Return raw HTML only.
-Do not output Markdown.
-Do not use Markdown headers such as #, ##, or ###.
-Do not use code fences.
-Do not include explanations before or after the HTML.
-Email formatting requirements:
-At the top, create a formatted title block:
-<div style="background-color:#1f4e79;color:white;padding:18px 22px;border-radius:8px;margin-bottom:20px;">
-  <h1 style="margin:0;font-size:28px;">Daily News Report | [Today’s Date]</h1>
-</div>
-Use these HTML elements:
-* Use <h2> for each main section heading.
-* Use <ul> and <li> for bullet lists.
-* Use <strong> for important names, numbers, index levels, and dates.
-* Use a proper HTML <table> for the Stock Market News section.
-* Use <hr> before the Stock Market News section and before the Weather section.
-* Use inline CSS where useful for readability.
-* Keep formatting clean for Gmail.
+Report format:
+Write in clean Markdown, not HTML.
+Title:
+# Daily News Report | [Today’s Date]
 Sections:
-<h2>Executive Summary</h2>
-Write 3–5 short bullet points summarizing the most important developments.
-<h2>U.S. National News</h2>
+## Executive Summary
+Write 3–5 short bullets summarizing the most important developments.
+## U.S. National News
 Provide 5 verified headlines. Each item should be 1–2 sentences.
-<h2>International News</h2>
+## International News
 Provide 5 verified headlines. Each item should be 1–2 sentences.
-<h2>Stock Market News</h2>
-Create a simple HTML table with these columns:
+## Stock Market News
+Create a simple table with these columns:
 Index / Asset | Latest Move | Latest Level | Main Driver | Source/Time
 Include:
 * Dow Jones Industrial Average
@@ -55,11 +40,11 @@ Include:
 * Nasdaq Composite
 * Brent or WTI crude oil
 After the table, write 2–3 sentences explaining the main market drivers.
-<h2>Technology Industry News</h2>
+## Technology Industry News
 Provide 3–5 verified items. Each item should be 1–2 sentences.
-<h2>Artificial Intelligence News</h2>
+## Artificial Intelligence News
 Provide 3–5 verified items. Each item should be 1–2 sentences.
-<h2>Weather for Henderson, Nevada</h2>
+## Weather for Henderson, Nevada
 Include:
 * Current or latest temperature
 * Today’s high and low
@@ -67,8 +52,8 @@ Include:
 * Wind if relevant
 * Precipitation chance
 * Weather alerts or heat concerns if any
-<h2>Sources Checked</h2>
-List the main sources used, grouped by section. Include source names and links using HTML <a href=""> links when available.
+## Sources Checked
+List the main sources used, grouped by section. Include source names and links.
 Style requirements:
 * Be factual, calm, and neutral.
 * Avoid hype and political opinion.
