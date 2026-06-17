@@ -6,17 +6,17 @@
     "sunset": "7:59 PM",
     "uvIndex": 8.75,
     "day": {
-      "temp": 92,
+      "temp": 91,
       "condition": "Clear sky",
       "humidity": 15,
-      "windSpeed": 15,
+      "windSpeed": 16,
       "windDir": "SW"
     },
     "night": {
       "temp": 90,
       "condition": "Clear sky",
       "humidity": 7,
-      "windSpeed": 15,
+      "windSpeed": 13,
       "windDir": "SW"
     },
     "high": 106,

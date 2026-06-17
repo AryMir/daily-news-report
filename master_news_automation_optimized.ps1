@@ -227,10 +227,9 @@ if ($HtmlContent -notmatch "<h1|<h2|<html|<body|Daily News Report") {
     Write-Host "ERROR: Gemini response does not look like a Daily News HTML report." -ForegroundColor Red
     throw "Invalid HTML report. Stopping automation."
 }
-# Create a plain-text Markdown fallback for the website content file.
-$MarkdownContent = $HtmlContent -replace "<[^>]+>", ""
-$MarkdownContent = $MarkdownContent -replace "&nbsp;", " "
-$MarkdownContent = $MarkdownContent.Trim()
+# Preserve the generated HTML for the website content file.
+# The website generator can render raw HTML inside the .md file.
+$MarkdownContent = $HtmlContent.Trim()
 $CurrentDate = Get-Date -Format "yyyy-MM-dd"
 $ContentDir = "C:\Antigravity\Daily_News_Project\content"
 if (-not (Test-Path $ContentDir)) {
@@ -256,6 +255,7 @@ Write-Host "Successfully generated HTML report via Gemini model: $SuccessfulMode
 Write-Host "Email sending skipped here. run_daily.ps1 will send email only after GitHub push succeeds." -ForegroundColor Yellow
 
 Stop-Transcript
+
 
 
 
