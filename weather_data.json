@@ -6,16 +6,16 @@
     "sunset": "7:59 PM",
     "uvIndex": 8.75,
     "day": {
-      "temp": 88,
+      "temp": 91,
       "condition": "Clear sky",
       "humidity": 15,
-      "windSpeed": 16,
+      "windSpeed": 15,
       "windDir": "SW"
     },
     "night": {
       "temp": 90,
       "condition": "Clear sky",
-      "humidity": 9,
+      "humidity": 7,
       "windSpeed": 15,
       "windDir": "SW"
     },
@@ -25,7 +25,7 @@
   "forecast": [
     {
       "dayName": "18 Thu",
-      "high": 103,
+      "high": 102,
       "low": 81,
       "condition": "Overcast",
       "precipChance": 1,
@@ -35,7 +35,7 @@
     {
       "dayName": "19 Fri",
       "high": 101,
-      "low": 81,
+      "low": 78,
       "condition": "Clear sky",
       "precipChance": 0,
       "windSpeed": 21,
