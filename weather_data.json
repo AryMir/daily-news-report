@@ -4,18 +4,18 @@
     "date": "Wednesday, June 24",
     "sunrise": "5:25 AM",
     "sunset": "8:00 PM",
-    "uvIndex": 7.7,
+    "uvIndex": 8.55,
     "day": {
-      "temp": 90,
-      "condition": "Mainly clear",
-      "humidity": 23,
-      "windSpeed": 10,
-      "windDir": "NW"
+      "temp": 87,
+      "condition": "Overcast",
+      "humidity": 38,
+      "windSpeed": 7,
+      "windDir": "W"
     },
     "night": {
       "temp": 88,
       "condition": "Clear sky",
-      "humidity": 22,
+      "humidity": 27,
       "windSpeed": 10,
       "windDir": "S"
     },
@@ -43,38 +43,38 @@
     },
     {
       "dayName": "27 Sat",
-      "high": 92,
+      "high": 91,
       "low": 72,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 40,
+      "windSpeed": 39,
       "windDir": "SW"
     },
     {
       "dayName": "28 Sun",
-      "high": 87,
+      "high": 88,
       "low": 65,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 29,
+      "windSpeed": 31,
       "windDir": "SW"
     },
     {
       "dayName": "29 Mon",
       "high": 92,
-      "low": 73,
+      "low": 75,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 14,
+      "windSpeed": 13,
       "windDir": "S"
     },
     {
       "dayName": "30 Tue",
-      "high": 95,
-      "low": 78,
+      "high": 96,
+      "low": 80,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 20,
+      "windSpeed": 22,
       "windDir": "S"
     }
   ]
