@@ -6,39 +6,39 @@
     "sunset": "8:01 PM",
     "uvIndex": 8.7,
     "day": {
-      "temp": 84,
+      "temp": 104,
       "condition": "Clear sky",
-      "humidity": 16,
-      "windSpeed": 9,
+      "humidity": 7,
+      "windSpeed": 16,
       "windDir": "SW"
     },
     "night": {
       "temp": 87,
       "condition": "Clear sky",
-      "humidity": 12,
+      "humidity": 8,
       "windSpeed": 13,
       "windDir": "SW"
     },
-    "high": 105,
-    "low": 82
+    "high": 104,
+    "low": 81
   },
   "forecast": [
     {
       "dayName": "26 Fri",
-      "high": 99,
-      "low": 76,
+      "high": 100,
+      "low": 77,
       "condition": "Overcast",
-      "precipChance": 0,
-      "windSpeed": 30,
+      "precipChance": 1,
+      "windSpeed": 28,
       "windDir": "SW"
     },
     {
       "dayName": "27 Sat",
-      "high": 92,
-      "low": 73,
+      "high": 91,
+      "low": 70,
       "condition": "Overcast",
-      "precipChance": 0,
-      "windSpeed": 38,
+      "precipChance": 1,
+      "windSpeed": 39,
       "windDir": "SW"
     },
     {
@@ -47,34 +47,34 @@
       "low": 65,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 32,
+      "windSpeed": 31,
       "windDir": "SW"
     },
     {
       "dayName": "29 Mon",
+      "high": 92,
+      "low": 73,
+      "condition": "Clear sky",
+      "precipChance": 0,
+      "windSpeed": 15,
+      "windDir": "NE"
+    },
+    {
+      "dayName": "30 Tue",
       "high": 93,
       "low": 76,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 24,
-      "windDir": "SW"
-    },
-    {
-      "dayName": "30 Tue",
-      "high": 94,
-      "low": 75,
-      "condition": "Clear sky",
-      "precipChance": 0,
-      "windSpeed": 18,
+      "windSpeed": 17,
       "windDir": "S"
     },
     {
       "dayName": "1 Wed",
       "high": 94,
-      "low": 75,
+      "low": 77,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 24,
+      "windSpeed": 21,
       "windDir": "S"
     }
   ]
