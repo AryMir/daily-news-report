@@ -49,6 +49,10 @@ Write-Host ""
 if (Test-Path ".\fetch_weather.js") {
     Write-Host "Refreshing weather_data.json..."
     node ".\fetch_weather.js"
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "ERROR: Weather refresh failed. Nothing will be committed or pushed." -ForegroundColor Red
+        exit $LASTEXITCODE
+    }
     Write-Host "Weather refresh completed."
     Write-Host ""
 } else {
@@ -62,6 +66,10 @@ if (-not (Test-Path ".\build.js")) {
 }
 Write-Host "Building website..."
 node ".\build.js"
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "ERROR: Website build failed. Nothing will be committed or pushed." -ForegroundColor Red
+    exit $LASTEXITCODE
+}
 Write-Host "Website build completed."
 Write-Host ""
 # Show Git status
@@ -77,12 +85,43 @@ if ([string]::IsNullOrWhiteSpace($Changes)) {
 }
 # Commit and push
 Write-Host "Staging changes..."
-git add .
+git add -- $ReportFile $CalendarFile $WeatherFile ".\public"
+$StagedChanges = git diff --cached --name-only
+if ([string]::IsNullOrWhiteSpace($StagedChanges)) {
+    Write-Host "No publish-related changes found after staging. Nothing to commit or push."
+    Write-Host "Other unstaged changes, if any, were left untouched."
+    Write-Host ""
+    exit 0
+}
 $CommitMessage = "Publish semi-automatic daily news report $Date"
 Write-Host "Committing changes..."
 git commit -m $CommitMessage
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "ERROR: Git commit failed. Nothing will be pushed." -ForegroundColor Red
+    exit $LASTEXITCODE
+}
 Write-Host "Pushing to GitHub..."
-git push
+$PushSucceeded = $false
+$MaxAttempts = 5
+for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
+    Write-Host "GitHub push attempt $attempt of $MaxAttempts..."
+    git push origin main
+    if ($LASTEXITCODE -eq 0) {
+        $PushSucceeded = $true
+        Write-Host "GitHub push succeeded." -ForegroundColor Green
+        break
+    }
+    Write-Host "GitHub push failed on attempt $attempt." -ForegroundColor Yellow
+    if ($attempt -lt $MaxAttempts) {
+        $WaitSeconds = 30 * $attempt
+        Write-Host "Waiting $WaitSeconds seconds before retry..."
+        Start-Sleep -Seconds $WaitSeconds
+    }
+}
+if (-not $PushSucceeded) {
+    Write-Host "ERROR: GitHub push failed after $MaxAttempts attempts." -ForegroundColor Red
+    exit 1
+}
 Write-Host ""
 Write-Host "==============================================="
 Write-Host " Done."
