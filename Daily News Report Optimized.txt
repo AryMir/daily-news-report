@@ -29,7 +29,7 @@ Do not include explanations before or after the HTML.
 Email formatting requirements:
 At the top, create a formatted title block:
 <div style="background-color:#1f4e79;color:white;padding:18px 22px;border-radius:8px;margin-bottom:20px;">
-  <h1 style="margin:0;font-size:28px;">Daily News Report | [Today’s Date]</h1>
+  <h1 style="margin:0;font-size:28px;color:#ffffff;">Daily News Report | [Today’s Date]</h1>
 </div>
 Use these HTML elements:
 * Use <h2> for each main section heading.
