@@ -15,6 +15,10 @@ $PromptFile = "C:\Antigravity\Daily_News_Project\Daily News Report Optimized.txt
 $EmailScript = "C:\Antigravity\Daily_News_Project\send_news_email.ps1"
 $TempHtml = "$env:TEMP\daily_news_report_optimized.html"
 $LogFile = "C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt"
+$Culture = [System.Globalization.CultureInfo]::GetCultureInfo("en-US")
+$CurrentDate = Get-Date -Format "yyyy-MM-dd"
+$CurrentDateLong = (Get-Date).ToString("dddd, MMMM d, yyyy", $Culture)
+$ExpectedReportTitle = "Daily News Report | $CurrentDateLong"
 
 # Add BCC email addresses here tomorrow (e.g., @("friend1@example.com", "friend2@example.com"))
 # Testing mode / temporary: no BCC recipients
@@ -77,10 +81,25 @@ Write-Host "calendar_data.json refreshed successfully." -ForegroundColor Green
 Write-Host "[Trace] Reading Optimized prompt file..."
 
 $SystemPrompt = [string](Get-Content -Path $PromptFile -Raw -Encoding UTF8)
+$SystemPrompt = @"
+Current date context:
+Today is exactly $CurrentDateLong ($CurrentDate) in the America/Los_Angeles timezone.
+The report title must be exactly: $ExpectedReportTitle
+Do not use any sample, archived, memorized, or prior-year news. If live current sources do not confirm the facts for $CurrentDateLong or the latest available market session, stop instead of writing a report.
+
+$SystemPrompt
+"@
 Write-Host "[Trace] Building user prompt..."
 
 # We use the same formatting rules as the original, just referencing the optimized system instructions!
-$UserPrompt = 'Based on the system instructions, please perform a web search to gather today''s news, markets, and Henderson NV weather. Structure the information exactly as requested in the instructions. Return raw HTML only. Do not return Markdown. Do not return a second version. Do not include conversational text, explanations, or markdown code blocks. The first character of the response must be "<".'
+$UserPrompt = @"
+Based on the system instructions, perform a web search to gather news, markets, and Henderson NV weather for exactly $CurrentDateLong ($CurrentDate).
+
+The title block must contain this exact h1 text:
+$ExpectedReportTitle
+
+Use current verified sources only. Do not use 2024, 2025, sample, archived, or memorized stories unless a current source specifically requires historical context. Structure the information exactly as requested in the instructions. Return raw HTML only. Do not return Markdown. Do not return a second version. Do not include conversational text, explanations, or markdown code blocks. The first character of the response must be "<".
+"@
 Write-Host "[Trace] Building JSON object..."
 
 # Build the JSON payload for the Gemini API
@@ -227,10 +246,21 @@ if ($HtmlContent -notmatch "<h1|<h2|<html|<body|Daily News Report") {
     Write-Host "ERROR: Gemini response does not look like a Daily News HTML report." -ForegroundColor Red
     throw "Invalid HTML report. Stopping automation."
 }
+$TitleMatch = [regex]::Match($HtmlContent, "<h1[^>]*>\s*(?<title>.*?)\s*</h1>", [System.Text.RegularExpressions.RegexOptions]::Singleline)
+if (-not $TitleMatch.Success) {
+    Write-Host "ERROR: Gemini response does not include a report title." -ForegroundColor Red
+    throw "Missing Daily News report title. Stopping automation."
+}
+$ActualReportTitle = ([regex]::Replace($TitleMatch.Groups["title"].Value, "<[^>]+>", "")).Trim()
+if ($ActualReportTitle -ne $ExpectedReportTitle) {
+    Write-Host "ERROR: Gemini produced a report with the wrong date/title." -ForegroundColor Red
+    Write-Host "Expected: $ExpectedReportTitle" -ForegroundColor Red
+    Write-Host "Actual:   $ActualReportTitle" -ForegroundColor Red
+    throw "Wrong-date Daily News report. Stopping automation before saving, publishing, or emailing."
+}
 # Preserve the generated HTML for the website content file.
 # The website generator can render raw HTML inside the .md file.
 $MarkdownContent = $HtmlContent.Trim()
-$CurrentDate = Get-Date -Format "yyyy-MM-dd"
 $ContentDir = "C:\Antigravity\Daily_News_Project\content"
 if (-not (Test-Path $ContentDir)) {
     New-Item -ItemType Directory -Path $ContentDir | Out-Null
