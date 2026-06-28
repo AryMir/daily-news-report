@@ -15,6 +15,7 @@ $PromptFile = "C:\Antigravity\Daily_News_Project\Daily News Report Optimized.txt
 $EmailScript = "C:\Antigravity\Daily_News_Project\send_news_email.ps1"
 $TempHtml = "$env:TEMP\daily_news_report_optimized.html"
 $LogFile = "C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt"
+$LastSuccessfulModelFile = "C:\Antigravity\Daily_News_Project\last_successful_gemini_model.txt"
 $Culture = [System.Globalization.CultureInfo]::GetCultureInfo("en-US")
 $CurrentDate = Get-Date -Format "yyyy-MM-dd"
 $CurrentDateLong = (Get-Date).ToString("dddd, MMMM d, yyyy", $Culture)
@@ -131,7 +132,7 @@ $ModelsUrl = "https://generativelanguage.googleapis.com/v1beta/models?key=$ApiKe
 # Then filter out non-text models and rank the best text models first.
 $CandidateModels = @()
 try {
-    $ModelsResponse = Invoke-RestMethod -Uri $ModelsUrl -Method Get
+    $ModelsResponse = Invoke-RestMethod -Uri $ModelsUrl -Method Get -TimeoutSec 30
     $CandidateModels = $ModelsResponse.models |
         Where-Object {
             ($_.supportedGenerationMethods -contains "generateContent") -and
@@ -174,6 +175,16 @@ try {
         $PreferredFirst | Where-Object { $CandidateModels -contains $_ }
         $CandidateModels | Where-Object { $PreferredFirst -notcontains $_ }
     ) | Select-Object -Unique
+    if (Test-Path $LastSuccessfulModelFile) {
+        $LastSuccessfulModel = (Get-Content -Path $LastSuccessfulModelFile -Raw -Encoding UTF8).Trim()
+        if ($LastSuccessfulModel -and ($CandidateModels -contains $LastSuccessfulModel)) {
+            $CandidateModels = @(
+                $LastSuccessfulModel
+                $CandidateModels | Where-Object { $_ -ne $LastSuccessfulModel }
+            ) | Select-Object -Unique
+            Write-Host "[Trace] Trying last successful Gemini model first: $LastSuccessfulModel" -ForegroundColor Cyan
+        }
+    }
     Write-Host "[Trace] Candidate Gemini models to try:" -ForegroundColor Cyan
     $CandidateModels | ForEach-Object { Write-Host " - $_" -ForegroundColor Cyan }
 }
@@ -199,10 +210,11 @@ foreach ($ActiveModel in $CandidateModels) {
     $Url = "https://generativelanguage.googleapis.com/v1beta/models/${ActiveModel}:generateContent?key=$ApiKey"
     Write-Host "Asking Gemini ($ActiveModel) to research and compile the optimized news... (this takes about 15-30 seconds)" -ForegroundColor Yellow
     try {
-        $Response = Invoke-RestMethod -Uri $Url -Method Post -Headers $Headers -Body ([System.Text.Encoding]::UTF8.GetBytes($Body))
+        $Response = Invoke-RestMethod -Uri $Url -Method Post -Headers $Headers -Body ([System.Text.Encoding]::UTF8.GetBytes($Body)) -TimeoutSec 90
         $GeneratedText = $Response.candidates[0].content.parts[0].text
         if ($GeneratedText -and $GeneratedText.Trim().Length -gt 100) {
             $SuccessfulModel = $ActiveModel
+            Set-Content -Path $LastSuccessfulModelFile -Value $SuccessfulModel -Encoding UTF8
             Write-Host "Successfully generated news using Gemini model: $SuccessfulModel" -ForegroundColor Green
             break
         }
