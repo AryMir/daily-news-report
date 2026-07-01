@@ -206,6 +206,28 @@ if (-not $CandidateModels -or $CandidateModels.Count -eq 0) {
 $GeneratedText = $null
 $SuccessfulModel = $null
 $LastGeminiError = $null
+function Test-DailyNewsHtml {
+    param(
+        [string]$HtmlContent,
+        [string]$ExpectedReportTitle
+    )
+
+    if ($HtmlContent -match "^\s*(I understand|Sure|Certainly|Here is|Okay|I will)") {
+        return "Gemini returned conversational text instead of HTML."
+    }
+    if ($HtmlContent -notmatch "<h1|<h2|<html|<body|Daily News Report") {
+        return "Gemini response does not look like a Daily News HTML report."
+    }
+    $TitleMatch = [regex]::Match($HtmlContent, "<h1[^>]*>\s*(?<title>.*?)\s*</h1>", [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    if (-not $TitleMatch.Success) {
+        return "Gemini response does not include a report title."
+    }
+    $ActualReportTitle = ([regex]::Replace($TitleMatch.Groups["title"].Value, "<[^>]+>", "")).Trim()
+    if ($ActualReportTitle -ne $ExpectedReportTitle) {
+        return "Gemini produced a report with the wrong date/title. Expected: $ExpectedReportTitle Actual: $ActualReportTitle"
+    }
+    return $null
+}
 foreach ($ActiveModel in $CandidateModels) {
     $Url = "https://generativelanguage.googleapis.com/v1beta/models/${ActiveModel}:generateContent?key=$ApiKey"
     Write-Host "Asking Gemini ($ActiveModel) to research and compile the optimized news... (this takes about 15-30 seconds)" -ForegroundColor Yellow
@@ -213,6 +235,17 @@ foreach ($ActiveModel in $CandidateModels) {
         $Response = Invoke-RestMethod -Uri $Url -Method Post -Headers $Headers -Body ([System.Text.Encoding]::UTF8.GetBytes($Body)) -TimeoutSec 90
         $GeneratedText = $Response.candidates[0].content.parts[0].text
         if ($GeneratedText -and $GeneratedText.Trim().Length -gt 100) {
+            $CandidateHtml = $GeneratedText -replace "^```html\s*", ""
+            $CandidateHtml = $CandidateHtml -replace "\s*```$", ""
+            $CandidateHtml = $CandidateHtml.Trim()
+            $ValidationError = Test-DailyNewsHtml -HtmlContent $CandidateHtml -ExpectedReportTitle $ExpectedReportTitle
+            if ($ValidationError) {
+                $LastGeminiError = "Model $ActiveModel returned invalid report content: $ValidationError"
+                Write-Host "[Warning] $LastGeminiError" -ForegroundColor Yellow
+                Start-Sleep -Seconds 5
+                continue
+            }
+            $GeneratedText = $CandidateHtml
             $SuccessfulModel = $ActiveModel
             Set-Content -Path $LastSuccessfulModelFile -Value $SuccessfulModel -Encoding UTF8
             Write-Host "Successfully generated news using Gemini model: $SuccessfulModel" -ForegroundColor Green
@@ -250,25 +283,10 @@ $GeneratedText = $GeneratedText.Trim()
 # HTML-only output mode
 $HtmlContent = $GeneratedText.Trim()
 # Safety checks: stop if Gemini returned conversational text or non-HTML content.
-if ($HtmlContent -match "^\s*(I understand|Sure|Certainly|Here is|Okay|I will)") {
-    Write-Host "ERROR: Gemini returned conversational text instead of HTML." -ForegroundColor Red
-    throw "Invalid Gemini response. Stopping automation."
-}
-if ($HtmlContent -notmatch "<h1|<h2|<html|<body|Daily News Report") {
-    Write-Host "ERROR: Gemini response does not look like a Daily News HTML report." -ForegroundColor Red
-    throw "Invalid HTML report. Stopping automation."
-}
-$TitleMatch = [regex]::Match($HtmlContent, "<h1[^>]*>\s*(?<title>.*?)\s*</h1>", [System.Text.RegularExpressions.RegexOptions]::Singleline)
-if (-not $TitleMatch.Success) {
-    Write-Host "ERROR: Gemini response does not include a report title." -ForegroundColor Red
-    throw "Missing Daily News report title. Stopping automation."
-}
-$ActualReportTitle = ([regex]::Replace($TitleMatch.Groups["title"].Value, "<[^>]+>", "")).Trim()
-if ($ActualReportTitle -ne $ExpectedReportTitle) {
-    Write-Host "ERROR: Gemini produced a report with the wrong date/title." -ForegroundColor Red
-    Write-Host "Expected: $ExpectedReportTitle" -ForegroundColor Red
-    Write-Host "Actual:   $ActualReportTitle" -ForegroundColor Red
-    throw "Wrong-date Daily News report. Stopping automation before saving, publishing, or emailing."
+$ValidationError = Test-DailyNewsHtml -HtmlContent $HtmlContent -ExpectedReportTitle $ExpectedReportTitle
+if ($ValidationError) {
+    Write-Host "ERROR: $ValidationError" -ForegroundColor Red
+    throw "Invalid Daily News report. Stopping automation before saving, publishing, or emailing."
 }
 # Preserve the generated HTML for the website content file.
 # The website generator can render raw HTML inside the .md file.
