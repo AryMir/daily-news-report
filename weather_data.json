@@ -9,8 +9,8 @@
       "temp": 94,
       "condition": "Clear sky",
       "humidity": 12,
-      "windSpeed": 10,
-      "windDir": "S"
+      "windSpeed": 11,
+      "windDir": "SE"
     },
     "night": {
       "temp": 82,
@@ -19,7 +19,7 @@
       "windSpeed": 11,
       "windDir": "S"
     },
-    "high": 98,
+    "high": 97,
     "low": 76
   },
   "forecast": [
