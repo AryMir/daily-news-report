@@ -206,6 +206,59 @@ if (-not $CandidateModels -or $CandidateModels.Count -eq 0) {
 $GeneratedText = $null
 $SuccessfulModel = $null
 $LastGeminiError = $null
+$RetryableGeminiStatusCodes = @(429, 500, 502, 503, 504)
+$MaxAttemptsPerModel = 4
+$BaseRetrySeconds = 60
+function Get-GeminiHttpStatusCode {
+    param(
+        [object]$ErrorRecord
+    )
+
+    $Response = $ErrorRecord.Exception.Response
+    if ($Response -and $Response.StatusCode) {
+        return [int]$Response.StatusCode
+    }
+    return $null
+}
+function Get-GeminiRetryAfterSeconds {
+    param(
+        [object]$ErrorRecord
+    )
+
+    $Response = $ErrorRecord.Exception.Response
+    if (-not $Response -or -not $Response.Headers) {
+        return $null
+    }
+    $RetryAfter = $Response.Headers["Retry-After"]
+    if (-not $RetryAfter) {
+        return $null
+    }
+    $RetryAfterSeconds = 0
+    if ([int]::TryParse($RetryAfter, [ref]$RetryAfterSeconds)) {
+        return $RetryAfterSeconds
+    }
+    $RetryAfterDate = [DateTime]::MinValue
+    if ([DateTime]::TryParse($RetryAfter, [ref]$RetryAfterDate)) {
+        $SecondsUntilRetry = [int][Math]::Ceiling(($RetryAfterDate.ToUniversalTime() - (Get-Date).ToUniversalTime()).TotalSeconds)
+        if ($SecondsUntilRetry -gt 0) {
+            return $SecondsUntilRetry
+        }
+    }
+    return $null
+}
+function Get-GeminiBackoffSeconds {
+    param(
+        [int]$Attempt,
+        [object]$RetryAfterSeconds
+    )
+
+    if (($null -ne $RetryAfterSeconds) -and ([int]$RetryAfterSeconds -gt 0)) {
+        return [Math]::Min([int]$RetryAfterSeconds + (Get-Random -Minimum 5 -Maximum 20), 600)
+    }
+    $ExponentialDelay = $BaseRetrySeconds * [Math]::Pow(2, ($Attempt - 1))
+    $Jitter = Get-Random -Minimum 10 -Maximum 45
+    return [Math]::Min([int]$ExponentialDelay + $Jitter, 600)
+}
 function Test-DailyNewsHtml {
     param(
         [string]$HtmlContent,
@@ -230,43 +283,61 @@ function Test-DailyNewsHtml {
 }
 foreach ($ActiveModel in $CandidateModels) {
     $Url = "https://generativelanguage.googleapis.com/v1beta/models/${ActiveModel}:generateContent?key=$ApiKey"
-    Write-Host "Asking Gemini ($ActiveModel) to research and compile the optimized news... (this takes about 15-30 seconds)" -ForegroundColor Yellow
-    try {
-        $Response = Invoke-RestMethod -Uri $Url -Method Post -Headers $Headers -Body ([System.Text.Encoding]::UTF8.GetBytes($Body)) -TimeoutSec 90
-        $GeneratedText = $Response.candidates[0].content.parts[0].text
-        if ($GeneratedText -and $GeneratedText.Trim().Length -gt 100) {
-            $CandidateHtml = $GeneratedText -replace "^```html\s*", ""
-            $CandidateHtml = $CandidateHtml -replace "\s*```$", ""
-            $CandidateHtml = $CandidateHtml.Trim()
-            $ValidationError = Test-DailyNewsHtml -HtmlContent $CandidateHtml -ExpectedReportTitle $ExpectedReportTitle
-            if ($ValidationError) {
-                $LastGeminiError = "Model $ActiveModel returned invalid report content: $ValidationError"
+    for ($Attempt = 1; $Attempt -le $MaxAttemptsPerModel; $Attempt++) {
+        Write-Host "Asking Gemini ($ActiveModel) to research and compile the optimized news... attempt $Attempt of $MaxAttemptsPerModel" -ForegroundColor Yellow
+        try {
+            $Response = Invoke-RestMethod -Uri $Url -Method Post -Headers $Headers -Body ([System.Text.Encoding]::UTF8.GetBytes($Body)) -TimeoutSec 120
+            $GeneratedText = $Response.candidates[0].content.parts[0].text
+            if ($GeneratedText -and $GeneratedText.Trim().Length -gt 100) {
+                $CandidateHtml = $GeneratedText -replace "^```html\s*", ""
+                $CandidateHtml = $CandidateHtml -replace "\s*```$", ""
+                $CandidateHtml = $CandidateHtml.Trim()
+                $ValidationError = Test-DailyNewsHtml -HtmlContent $CandidateHtml -ExpectedReportTitle $ExpectedReportTitle
+                if ($ValidationError) {
+                    $LastGeminiError = "Model $ActiveModel returned invalid report content: $ValidationError"
+                    Write-Host "[Warning] $LastGeminiError" -ForegroundColor Yellow
+                    break
+                }
+                $GeneratedText = $CandidateHtml
+                $SuccessfulModel = $ActiveModel
+                Set-Content -Path $LastSuccessfulModelFile -Value $SuccessfulModel -Encoding UTF8
+                Write-Host "Successfully generated news using Gemini model: $SuccessfulModel" -ForegroundColor Green
+                break
+            }
+            else {
+                $LastGeminiError = "Model $ActiveModel returned an empty or too-short response."
                 Write-Host "[Warning] $LastGeminiError" -ForegroundColor Yellow
-                Start-Sleep -Seconds 5
+                break
+            }
+        }
+        catch {
+            if ($_.ErrorDetails -and $_.ErrorDetails.Message) {
+                $LastGeminiError = $_.ErrorDetails.Message
+            }
+            else {
+                $LastGeminiError = $_.Exception.Message
+            }
+            $StatusCode = Get-GeminiHttpStatusCode -ErrorRecord $_
+            Write-Host "[Warning] Gemini model failed: $ActiveModel" -ForegroundColor Yellow
+            Write-Host $LastGeminiError -ForegroundColor Yellow
+            if (($RetryableGeminiStatusCodes -contains $StatusCode) -and ($Attempt -lt $MaxAttemptsPerModel)) {
+                $RetryAfterSeconds = Get-GeminiRetryAfterSeconds -ErrorRecord $_
+                $WaitSeconds = Get-GeminiBackoffSeconds -Attempt $Attempt -RetryAfterSeconds $RetryAfterSeconds
+                Write-Host "[Trace] Gemini returned retryable status $StatusCode. Waiting $WaitSeconds seconds before retrying the same model." -ForegroundColor Cyan
+                Start-Sleep -Seconds $WaitSeconds
                 continue
             }
-            $GeneratedText = $CandidateHtml
-            $SuccessfulModel = $ActiveModel
-            Set-Content -Path $LastSuccessfulModelFile -Value $SuccessfulModel -Encoding UTF8
-            Write-Host "Successfully generated news using Gemini model: $SuccessfulModel" -ForegroundColor Green
+            if ($RetryableGeminiStatusCodes -contains $StatusCode) {
+                Write-Host "[Trace] Retryable Gemini status $StatusCode persisted after $MaxAttemptsPerModel attempts. Trying the next candidate model." -ForegroundColor Cyan
+            }
+            else {
+                Write-Host "[Trace] Gemini failure was not classified as retryable. Trying the next candidate model." -ForegroundColor Cyan
+            }
             break
         }
-        else {
-            $LastGeminiError = "Model $ActiveModel returned an empty or too-short response."
-            Write-Host "[Warning] $LastGeminiError" -ForegroundColor Yellow
-        }
     }
-    catch {
-        if ($_.ErrorDetails -and $_.ErrorDetails.Message) {
-            $LastGeminiError = $_.ErrorDetails.Message
-        }
-        else {
-            $LastGeminiError = $_.Exception.Message
-        }
-        Write-Host "[Warning] Gemini model failed: $ActiveModel" -ForegroundColor Yellow
-        Write-Host $LastGeminiError -ForegroundColor Yellow
-        # Small pause before trying the next model.
-        Start-Sleep -Seconds 5
+    if ($SuccessfulModel) {
+        break
     }
 }
 if (-not $SuccessfulModel) {

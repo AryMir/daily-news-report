@@ -6,27 +6,27 @@
     "sunset": "8:01 PM",
     "uvIndex": 8.6,
     "day": {
-      "temp": 77,
+      "temp": 92,
       "condition": "Clear sky",
-      "humidity": 23,
-      "windSpeed": 7,
+      "humidity": 11,
+      "windSpeed": 14,
       "windDir": "SW"
     },
     "night": {
-      "temp": 83,
+      "temp": 80,
       "condition": "Clear sky",
-      "humidity": 13,
-      "windSpeed": 12,
-      "windDir": "SW"
+      "humidity": 16,
+      "windSpeed": 9,
+      "windDir": "S"
     },
-    "high": 96,
-    "low": 74
+    "high": 95,
+    "low": 75
   },
   "forecast": [
     {
       "dayName": "2 Thu",
-      "high": 98,
-      "low": 74,
+      "high": 97,
+      "low": 72,
       "condition": "Clear sky",
       "precipChance": 1,
       "windSpeed": 18,
@@ -35,46 +35,46 @@
     {
       "dayName": "3 Fri",
       "high": 100,
-      "low": 76,
-      "condition": "Partly cloudy",
+      "low": 73,
+      "condition": "Overcast",
       "precipChance": 0,
-      "windSpeed": 22,
+      "windSpeed": 18,
       "windDir": "SW"
     },
     {
       "dayName": "4 Sat",
-      "high": 101,
-      "low": 78,
+      "high": 103,
+      "low": 80,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 13,
+      "windSpeed": 14,
       "windDir": "SW"
     },
     {
       "dayName": "5 Sun",
       "high": 103,
-      "low": 82,
-      "condition": "Clear sky",
+      "low": 84,
+      "condition": "Overcast",
       "precipChance": 3,
       "windSpeed": 18,
       "windDir": "S"
     },
     {
       "dayName": "6 Mon",
-      "high": 106,
-      "low": 86,
-      "condition": "Clear sky",
-      "precipChance": 1,
-      "windSpeed": 20,
-      "windDir": "S"
-    },
-    {
-      "dayName": "7 Tue",
       "high": 107,
       "low": 85,
       "condition": "Clear sky",
+      "precipChance": 2,
+      "windSpeed": 18,
+      "windDir": "SW"
+    },
+    {
+      "dayName": "7 Tue",
+      "high": 108,
+      "low": 87,
+      "condition": "Clear sky",
       "precipChance": 1,
-      "windSpeed": 19,
+      "windSpeed": 18,
       "windDir": "SW"
     }
   ]
