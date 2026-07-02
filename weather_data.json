@@ -6,21 +6,21 @@
     "sunset": "8:00 PM",
     "uvIndex": 8.65,
     "day": {
-      "temp": 80,
+      "temp": 89,
       "condition": "Clear sky",
-      "humidity": 16,
-      "windSpeed": 12,
-      "windDir": "SW"
+      "humidity": 15,
+      "windSpeed": 8,
+      "windDir": "S"
     },
     "night": {
       "temp": 83,
       "condition": "Clear sky",
-      "humidity": 8,
+      "humidity": 7,
       "windSpeed": 11,
       "windDir": "S"
     },
     "high": 98,
-    "low": 75
+    "low": 76
   },
   "forecast": [
     {
@@ -46,7 +46,7 @@
       "high": 103,
       "low": 85,
       "condition": "Clear sky",
-      "precipChance": 4,
+      "precipChance": 2,
       "windSpeed": 20,
       "windDir": "S"
     },
@@ -55,7 +55,7 @@
       "high": 104,
       "low": 87,
       "condition": "Clear sky",
-      "precipChance": 2,
+      "precipChance": 5,
       "windSpeed": 21,
       "windDir": "SW"
     },
@@ -64,7 +64,7 @@
       "high": 106,
       "low": 87,
       "condition": "Clear sky",
-      "precipChance": 1,
+      "precipChance": 0,
       "windSpeed": 20,
       "windDir": "SW"
     },
@@ -73,7 +73,7 @@
       "high": 107,
       "low": 89,
       "condition": "Clear sky",
-      "precipChance": 2,
+      "precipChance": 1,
       "windSpeed": 21,
       "windDir": "SW"
     }
