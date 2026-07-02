@@ -259,6 +259,24 @@ function Get-GeminiBackoffSeconds {
     $Jitter = Get-Random -Minimum 10 -Maximum 45
     return [Math]::Min([int]$ExponentialDelay + $Jitter, 600)
 }
+function Repair-DailyNewsHtmlTitle {
+    param(
+        [string]$HtmlContent,
+        [string]$ExpectedReportTitle
+    )
+
+    if ($HtmlContent -match "<h1[^>]*>") {
+        return $HtmlContent
+    }
+
+    $TitleHtml = "<h1>$ExpectedReportTitle</h1>`r`n"
+    $BodyMatch = [regex]::Match($HtmlContent, "<body[^>]*>", [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    if ($BodyMatch.Success) {
+        return $HtmlContent.Substring(0, $BodyMatch.Index + $BodyMatch.Length) + "`r`n" + $TitleHtml + $HtmlContent.Substring($BodyMatch.Index + $BodyMatch.Length)
+    }
+
+    return $TitleHtml + $HtmlContent.TrimStart()
+}
 function Test-DailyNewsHtml {
     param(
         [string]$HtmlContent,
@@ -293,9 +311,21 @@ foreach ($ActiveModel in $CandidateModels) {
                 $CandidateHtml = $CandidateHtml -replace "\s*```$", ""
                 $CandidateHtml = $CandidateHtml.Trim()
                 $ValidationError = Test-DailyNewsHtml -HtmlContent $CandidateHtml -ExpectedReportTitle $ExpectedReportTitle
+                if ($ValidationError -eq "Gemini response does not include a report title.") {
+                    Write-Host "[Trace] Gemini returned report HTML without the title. Adding the expected title and validating again." -ForegroundColor Cyan
+                    $CandidateHtml = Repair-DailyNewsHtmlTitle -HtmlContent $CandidateHtml -ExpectedReportTitle $ExpectedReportTitle
+                    $ValidationError = Test-DailyNewsHtml -HtmlContent $CandidateHtml -ExpectedReportTitle $ExpectedReportTitle
+                }
                 if ($ValidationError) {
                     $LastGeminiError = "Model $ActiveModel returned invalid report content: $ValidationError"
                     Write-Host "[Warning] $LastGeminiError" -ForegroundColor Yellow
+                    if ($Attempt -lt $MaxAttemptsPerModel) {
+                        $WaitSeconds = Get-GeminiBackoffSeconds -Attempt $Attempt -RetryAfterSeconds $null
+                        Write-Host "[Trace] Report validation failed. Waiting $WaitSeconds seconds before retrying the same model." -ForegroundColor Cyan
+                        Start-Sleep -Seconds $WaitSeconds
+                        continue
+                    }
+                    Write-Host "[Trace] Report validation failed after $MaxAttemptsPerModel attempts. Trying the next candidate model." -ForegroundColor Cyan
                     break
                 }
                 $GeneratedText = $CandidateHtml
