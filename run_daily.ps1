@@ -1,6 +1,11 @@
 $ErrorActionPreference = "Stop"
 $ProjectDir = "C:\Antigravity\Daily_News_Project"
 Set-Location -Path $ProjectDir
+$RunMutex = New-Object System.Threading.Mutex($false, "Global\AntigravityDailyNewsRun")
+if (-not $RunMutex.WaitOne(0)) {
+    Write-Host "Another Daily News run is already in progress. Stopping this copy to prevent duplicate Gemini requests." -ForegroundColor Yellow
+    exit 0
+}
 # Prevent scheduled task from hanging on GitHub username/password prompts.
 $env:GIT_TERMINAL_PROMPT = "0"
 $Date = Get-Date -Format "yyyy-MM-dd"
@@ -100,6 +105,8 @@ if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 New-Item -ItemType File -Path $EmailSentMarker -Force | Out-Null
+$RunMutex.ReleaseMutex()
+$RunMutex.Dispose()
 Write-Host "Daily run complete! Website updated and email sent." -ForegroundColor Green
 
 

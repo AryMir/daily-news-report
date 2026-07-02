@@ -16,6 +16,7 @@ $EmailScript = "C:\Antigravity\Daily_News_Project\send_news_email.ps1"
 $TempHtml = "$env:TEMP\daily_news_report_optimized.html"
 $LogFile = "C:\Antigravity\Daily_News_Project\daily_news_optimized_log.txt"
 $LastSuccessfulModelFile = "C:\Antigravity\Daily_News_Project\last_successful_gemini_model.txt"
+$TryAllGeminiModels = ($env:TRY_ALL_GEMINI_MODELS -eq "YES")
 $Culture = [System.Globalization.CultureInfo]::GetCultureInfo("en-US")
 $CurrentDate = Get-Date -Format "yyyy-MM-dd"
 $CurrentDateLong = (Get-Date).ToString("dddd, MMMM d, yyyy", $Culture)
@@ -85,6 +86,7 @@ $SystemPrompt = [string](Get-Content -Path $PromptFile -Raw -Encoding UTF8)
 $SystemPrompt = @"
 Current date context:
 Today is exactly $CurrentDateLong ($CurrentDate) in the America/Los_Angeles timezone.
+Treat this script-provided date as authoritative. Do not call $CurrentDateLong a future date based on your internal model date or any other clock.
 The report title must be exactly: $ExpectedReportTitle
 Do not use any sample, archived, memorized, or prior-year news. If live current sources do not confirm the facts for $CurrentDateLong or the latest available market session, stop instead of writing a report.
 
@@ -95,6 +97,7 @@ Write-Host "[Trace] Building user prompt..."
 # We use the same formatting rules as the original, just referencing the optimized system instructions!
 $UserPrompt = @"
 Based on the system instructions, perform a web search to gather news, markets, and Henderson NV weather for exactly $CurrentDateLong ($CurrentDate).
+Treat $CurrentDateLong as today's date for this report. Do not reject the task by saying this date is in the future.
 
 The title block must contain this exact h1 text:
 $ExpectedReportTitle
@@ -185,18 +188,40 @@ try {
             Write-Host "[Trace] Trying last successful Gemini model first: $LastSuccessfulModel" -ForegroundColor Cyan
         }
     }
+    if (-not $TryAllGeminiModels) {
+        $PreferredSingleModel = if ($LastSuccessfulModel -and ($CandidateModels -contains $LastSuccessfulModel)) {
+            $LastSuccessfulModel
+        }
+        else {
+            "gemini-2.5-flash"
+        }
+        if ($CandidateModels -contains $PreferredSingleModel) {
+            $CandidateModels = @($PreferredSingleModel)
+            Write-Host "[Trace] TRY_ALL_GEMINI_MODELS is not YES. Limiting this run to: $PreferredSingleModel" -ForegroundColor Cyan
+        }
+        else {
+            Write-Host "[Warning] Preferred single Gemini model is not available; keeping discovered candidates." -ForegroundColor Yellow
+        }
+    }
     Write-Host "[Trace] Candidate Gemini models to try:" -ForegroundColor Cyan
     $CandidateModels | ForEach-Object { Write-Host " - $_" -ForegroundColor Cyan }
 }
 catch {
     Write-Host "[Warning] Failed to query models. Using emergency fallback list." -ForegroundColor Yellow
-    $CandidateModels = @(
+    $FallbackModels = @(
         "gemini-2.5-flash-lite",
         "gemini-2.0-flash-lite",
         "gemini-flash-lite-latest",
         "gemini-2.5-flash",
         "gemini-2.0-flash"
     )
+    if ($TryAllGeminiModels) {
+        $CandidateModels = $FallbackModels
+    }
+    else {
+        $CandidateModels = @("gemini-2.5-flash")
+        Write-Host "[Trace] TRY_ALL_GEMINI_MODELS is not YES. Limiting emergency fallback to: gemini-2.5-flash" -ForegroundColor Cyan
+    }
 }
 if (-not $CandidateModels -or $CandidateModels.Count -eq 0) {
     Write-Host "Error: No usable Gemini text models were found." -ForegroundColor Red
@@ -283,10 +308,13 @@ function Test-DailyNewsHtml {
         [string]$ExpectedReportTitle
     )
 
-    if ($HtmlContent -match "^\s*(I understand|Sure|Certainly|Here is|Okay|I will)") {
+    if ($HtmlContent -match "(?is)^\s*(I understand|Sure|Certainly|Here is|Okay|I will|I cannot|I can't|Unable to|I am unable)") {
         return "Gemini returned conversational text instead of HTML."
     }
-    if ($HtmlContent -notmatch "<h1|<h2|<html|<body|Daily News Report") {
+    if ($HtmlContent -match "(?is)(cannot create a reliable current Daily News Report|without live web access|future date|date is in the future|must stop as per the instructions|I must stop)") {
+        return "Gemini returned a refusal instead of a Daily News report."
+    }
+    if ($HtmlContent -notmatch "(?is)<(h1|h2|html|body|section|article|ul|ol|li|table|div|p)\b") {
         return "Gemini response does not look like a Daily News HTML report."
     }
     $TitleMatch = [regex]::Match($HtmlContent, "<h1[^>]*>\s*(?<title>.*?)\s*</h1>", [System.Text.RegularExpressions.RegexOptions]::Singleline)
