@@ -4,23 +4,23 @@
     "date": "Friday, July 3",
     "sunrise": "5:28 AM",
     "sunset": "8:00 PM",
-    "uvIndex": 8.5,
+    "uvIndex": 8.6,
     "day": {
-      "temp": 78,
-      "condition": "Overcast",
-      "humidity": 15,
-      "windSpeed": 12,
+      "temp": 97,
+      "condition": "Clear sky",
+      "humidity": 7,
+      "windSpeed": 7,
       "windDir": "S"
     },
     "night": {
       "temp": 85,
-      "condition": "Clear sky",
+      "condition": "Overcast",
       "humidity": 6,
-      "windSpeed": 11,
+      "windSpeed": 12,
       "windDir": "SW"
     },
-    "high": 101,
-    "low": 76
+    "high": 102,
+    "low": 77
   },
   "forecast": [
     {
@@ -29,26 +29,26 @@
       "low": 77,
       "condition": "Overcast",
       "precipChance": 0,
-      "windSpeed": 14,
+      "windSpeed": 19,
       "windDir": "SW"
     },
     {
       "dayName": "5 Sun",
       "high": 103,
-      "low": 85,
+      "low": 82,
       "condition": "Overcast",
       "precipChance": 1,
-      "windSpeed": 16,
+      "windSpeed": 17,
       "windDir": "S"
     },
     {
       "dayName": "6 Mon",
-      "high": 104,
-      "low": 84,
-      "condition": "Clear sky",
+      "high": 103,
+      "low": 85,
+      "condition": "Overcast",
       "precipChance": 0,
-      "windSpeed": 21,
-      "windDir": "SW"
+      "windSpeed": 17,
+      "windDir": "S"
     },
     {
       "dayName": "7 Tue",
@@ -56,21 +56,21 @@
       "low": 86,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 22,
+      "windSpeed": 20,
       "windDir": "SW"
     },
     {
       "dayName": "8 Wed",
-      "high": 107,
+      "high": 108,
       "low": 88,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 23,
+      "windSpeed": 21,
       "windDir": "SW"
     },
     {
       "dayName": "9 Thu",
-      "high": 107,
+      "high": 108,
       "low": 88,
       "condition": "Clear sky",
       "precipChance": 0,
