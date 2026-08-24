@@ -1,80 +1,80 @@
 {
   "today": {
     "location": "Henderson",
-    "date": "Saturday, August 22",
-    "sunrise": "6:04 AM",
-    "sunset": "7:21 PM",
-    "uvIndex": 8.05,
+    "date": "Monday, August 24",
+    "sunrise": "6:06 AM",
+    "sunset": "7:18 PM",
+    "uvIndex": 7.95,
     "day": {
-      "temp": 106,
-      "condition": "Clear sky",
-      "humidity": 12,
+      "temp": 104,
+      "condition": "Mainly clear",
+      "humidity": 16,
       "windSpeed": 10,
-      "windDir": "W"
+      "windDir": "S"
     },
     "night": {
       "temp": 92,
-      "condition": "Overcast",
-      "humidity": 15,
+      "condition": "Clear sky",
+      "humidity": 17,
       "windSpeed": 11,
       "windDir": "S"
     },
-    "high": 107,
-    "low": 86
+    "high": 105,
+    "low": 89
   },
   "forecast": [
     {
-      "dayName": "23 Sun",
-      "high": 108,
-      "low": 85,
-      "condition": "Overcast",
-      "precipChance": 2,
-      "windSpeed": 20,
-      "windDir": "SW"
-    },
-    {
-      "dayName": "24 Mon",
-      "high": 104,
-      "low": 83,
-      "condition": "Light drizzle",
-      "precipChance": 5,
-      "windSpeed": 13,
-      "windDir": "S"
-    },
-    {
       "dayName": "25 Tue",
-      "high": 103,
-      "low": 85,
-      "condition": "Light drizzle",
-      "precipChance": 1,
-      "windSpeed": 18,
-      "windDir": "E"
+      "high": 106,
+      "low": 82,
+      "condition": "Overcast",
+      "precipChance": 4,
+      "windSpeed": 13,
+      "windDir": "W"
     },
     {
       "dayName": "26 Wed",
       "high": 107,
-      "low": 92,
-      "condition": "Overcast",
-      "precipChance": 0,
+      "low": 85,
+      "condition": "Clear sky",
+      "precipChance": 1,
       "windSpeed": 19,
       "windDir": "SW"
     },
     {
       "dayName": "27 Thu",
-      "high": 108,
+      "high": 107,
       "low": 93,
-      "condition": "Partly cloudy",
+      "condition": "Light drizzle",
       "precipChance": 1,
-      "windSpeed": 20,
+      "windSpeed": 16,
       "windDir": "SW"
     },
     {
       "dayName": "28 Fri",
-      "high": 107,
-      "low": 94,
+      "high": 105,
+      "low": 90,
+      "condition": "Light drizzle",
+      "precipChance": 5,
+      "windSpeed": 23,
+      "windDir": "SW"
+    },
+    {
+      "dayName": "29 Sat",
+      "high": 103,
+      "low": 89,
       "condition": "Overcast",
-      "precipChance": 4,
-      "windSpeed": 18,
+      "precipChance": 6,
+      "windSpeed": 19,
+      "windDir": "SW"
+    },
+    {
+      "dayName": "30 Sun",
+      "high": 99,
+      "low": 86,
+      "condition": "Mainly clear",
+      "precipChance": 6,
+      "windSpeed": 23,
       "windDir": "SW"
     }
   ]
