@@ -7,9 +7,9 @@
     "uvIndex": 7.95,
     "day": {
       "temp": 108,
-      "condition": "Clear sky",
-      "humidity": 10,
-      "windSpeed": 8,
+      "condition": "Mainly clear",
+      "humidity": 9,
+      "windSpeed": 6,
       "windDir": "NW"
     },
     "night": {
