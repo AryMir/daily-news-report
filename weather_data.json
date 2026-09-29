@@ -1,81 +1,81 @@
 {
   "today": {
     "location": "Henderson",
-    "date": "Monday, September 28",
+    "date": "Tuesday, September 29",
     "sunrise": "6:33 AM",
-    "sunset": "6:28 PM",
-    "uvIndex": 6.6,
+    "sunset": "6:26 PM",
+    "uvIndex": 5.3,
     "day": {
-      "temp": 74,
-      "condition": "Clear sky",
-      "humidity": 51,
-      "windSpeed": 10,
-      "windDir": "S"
+      "temp": 63,
+      "condition": "Overcast",
+      "humidity": 82,
+      "windSpeed": 6,
+      "windDir": "NW"
     },
     "night": {
-      "temp": 65,
-      "condition": "Overcast",
-      "humidity": 61,
-      "windSpeed": 9,
+      "temp": 68,
+      "condition": "Light drizzle",
+      "humidity": 52,
+      "windSpeed": 3,
       "windDir": "NE"
     },
-    "high": 81,
+    "high": 80,
     "low": 63
   },
   "forecast": [
     {
-      "dayName": "29 Tue",
-      "high": 76,
-      "low": 60,
-      "condition": "Moderate drizzle",
-      "precipChance": 14,
-      "windSpeed": 17,
-      "windDir": "N"
-    },
-    {
       "dayName": "30 Wed",
-      "high": 89,
-      "low": 63,
-      "condition": "Clear sky",
-      "precipChance": 0,
-      "windSpeed": 7,
+      "high": 91,
+      "low": 66,
+      "condition": "Overcast",
+      "precipChance": 2,
+      "windSpeed": 14,
       "windDir": "S"
     },
     {
       "dayName": "1 Thu",
-      "high": 92,
-      "low": 77,
+      "high": 91,
+      "low": 66,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 4,
-      "windDir": "NE"
+      "windSpeed": 8,
+      "windDir": "E"
     },
     {
       "dayName": "2 Fri",
       "high": 93,
-      "low": 78,
-      "condition": "Clear sky",
+      "low": 79,
+      "condition": "Overcast",
       "precipChance": 0,
-      "windSpeed": 6,
-      "windDir": "SE"
+      "windSpeed": 7,
+      "windDir": "E"
     },
     {
       "dayName": "3 Sat",
       "high": 94,
       "low": 81,
-      "condition": "Clear sky",
+      "condition": "Overcast",
       "precipChance": 0,
       "windSpeed": 4,
-      "windDir": "N"
+      "windDir": "NE"
     },
     {
       "dayName": "4 Sun",
-      "high": 95,
-      "low": 82,
+      "high": 94,
+      "low": 83,
       "condition": "Clear sky",
       "precipChance": 0,
-      "windSpeed": 6,
-      "windDir": "N"
+      "windSpeed": 12,
+      "windDir": "SE"
+    },
+    {
+      "dayName": "5 Mon",
+      "high": 93,
+      "low": 83,
+      "condition": "Clear sky",
+      "precipChance": 1,
+      "windSpeed": 9,
+      "windDir": "SE"
     }
   ]
 }
