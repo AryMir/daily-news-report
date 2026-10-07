@@ -1,6 +1,22 @@
 $ErrorActionPreference = "Stop"
-$ProjectDir = "C:\Antigravity\Daily_News_Project"
+$ProjectDir = $PSScriptRoot
 Set-Location -Path $ProjectDir
+# Preserve unrelated staged work before generating or publishing.
+$ExistingStaged = @(git diff --cached --name-only)
+if ($LASTEXITCODE -ne 0) { throw 'Unable to inspect Git index.' }
+if ($ExistingStaged.Count -gt 0) { throw 'Existing staged changes require review before publishing. Nothing was generated, published, or emailed.' }
+
+$ExistingStaged = @(git diff --cached --name-only)
+if ($LASTEXITCODE -ne 0) { throw 'Unable to inspect Git index.' }
+if ($ExistingStaged.Count -gt 0) { throw 'Existing staged changes require review before publishing.' }
+
+$EnvFilePath = Join-Path $ProjectDir ".env"
+if (Test-Path $EnvFilePath) {
+    Get-Content $EnvFilePath | Where-Object { $_ -match '=' } | ForEach-Object {
+        $name, $value = $_ -split '=', 2
+        Set-Item -Path "env:\$($name.Trim())" -Value $value.Trim().Trim('"').Trim("'")
+    }
+}
 $RunMutex = New-Object System.Threading.Mutex($false, "Global\AntigravityDailyNewsRun")
 if (-not $RunMutex.WaitOne(0)) {
     Write-Host "Another Daily News run is already in progress. Stopping this copy to prevent duplicate Gemini requests." -ForegroundColor Yellow
@@ -79,6 +95,14 @@ if (-not $PushSucceeded) {
     Write-Host "Email will NOT be sent because the website may not be updated." -ForegroundColor Red
     exit 1
 }
+Write-Host "Deploying updated website to Cloudflare..." -ForegroundColor Cyan
+npx --yes wrangler@4.106.0 deploy
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "ERROR: Cloudflare deploy failed. Email will NOT be sent because the live website may not be updated." -ForegroundColor Red
+    Write-Host "If this is an authentication error, run 'npx wrangler login' in an interactive terminal or add CLOUDFLARE_API_TOKEN to .env." -ForegroundColor Yellow
+    exit $LASTEXITCODE
+}
+Write-Host "Cloudflare deploy succeeded." -ForegroundColor Green
 # Load optional BCC list from bcc_list.txt.
 # First line YES enables BCC. First line NO disables BCC.
 $BccList = @()
@@ -108,5 +132,7 @@ New-Item -ItemType File -Path $EmailSentMarker -Force | Out-Null
 $RunMutex.ReleaseMutex()
 $RunMutex.Dispose()
 Write-Host "Daily run complete! Website updated and email sent." -ForegroundColor Green
+
+
 
 

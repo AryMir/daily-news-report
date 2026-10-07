@@ -11,3 +11,5 @@ status/email-sent-*.ok
 
 *_BACKUP_*.ps1
 *BACKUP*.ps1
+
+.preview/

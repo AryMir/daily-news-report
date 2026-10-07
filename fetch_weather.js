@@ -81,6 +81,9 @@ async function fetchWeather() {
 
         const todaySummary = {
             location: currentLocation,
+            dateIso: todayDateStr,
+            observedAt: data.current.time,
+            precipChance: data.daily.precipitation_probability_max[0],
             date: new Date(todayDateStr).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' }),
             sunrise: formatTime(data.daily.sunrise[0]),
             sunset: formatTime(data.daily.sunset[0]),
@@ -92,6 +95,7 @@ async function fetchWeather() {
         };
 
         const weatherData = {
+            generatedAt: new Date().toISOString(),
             today: todaySummary,
             forecast: dailyForecast
         };
@@ -101,7 +105,10 @@ async function fetchWeather() {
 
     } catch (error) {
         console.error('Failed to fetch weather data:', error);
+        process.exitCode = 1;
     }
 }
 
 fetchWeather();
+
+

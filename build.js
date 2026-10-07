@@ -80,6 +80,7 @@ const globalCss = `
 
 function parseInline(text) {
     return text
+        .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank">$1</a>')
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
         .replace(/\*(.*?)\*/g, '<em>$1</em>');
 }
@@ -127,34 +128,50 @@ function parseMarkdown(md) {
     let lines = body.split('\n');
     let htmlLines = [];
     let inList = false;
+    let listType = null;
 
     for (let i = 0; i < lines.length; i++) {
         let line = lines[i].trimEnd();
         if (line === '---') {
-            if (inList) { htmlLines.push('</ul>'); inList = false; }
+            if (inList) { htmlLines.push(`</${listType}>`); inList = false; listType = null; }
             htmlLines.push('<hr>'); continue;
         }
         let headerMatch = line.match(/^(#{1,6})\s+(.*)/);
         if (headerMatch) {
-            if (inList) { htmlLines.push('</ul>'); inList = false; }
+            if (inList) { htmlLines.push(`</${listType}>`); inList = false; listType = null; }
             let level = headerMatch[1].length;
             htmlLines.push(`<h${level}>${parseInline(headerMatch[2])}</h${level}>`);
             continue;
         }
         if (line.match(/^[\*\-]\s+(.*)/)) {
-            if (!inList) { htmlLines.push('<ul>'); inList = true; }
+            if (inList && listType !== 'ul') { htmlLines.push(`</${listType}>`); inList = false; listType = null; }
+            if (!inList) { htmlLines.push('<ul>'); inList = true; listType = 'ul'; }
             let liContent = line.match(/^[\*\-]\s+(.*)/)[1];
             htmlLines.push(`<li>${parseInline(liContent)}</li>`);
             continue;
+        } else if (line.match(/^\d+\.\s+(.*)/)) {
+            if (inList && listType !== 'ol') { htmlLines.push(`</${listType}>`); inList = false; listType = null; }
+            if (!inList) { htmlLines.push('<ol>'); inList = true; listType = 'ol'; }
+            let liContent = line.match(/^\d+\.\s+(.*)/)[1];
+            htmlLines.push(`<li>${parseInline(liContent)}</li>`);
+            continue;
         } else if (inList && line.trim() === '') {
-            htmlLines.push('</ul>'); inList = false;
+            const nextLine = lines.slice(i + 1).find((candidate) => candidate.trim() !== '');
+            const nextTrimmedLine = nextLine ? nextLine.trim() : '';
+            if (
+                (listType === 'ol' && nextTrimmedLine.match(/^\d+\.\s+/)) ||
+                (listType === 'ul' && nextTrimmedLine.match(/^[\*\-]\s+/))
+            ) {
+                continue;
+            }
+            htmlLines.push(`</${listType}>`); inList = false; listType = null;
         }
         if (line.startsWith('<div') || line.startsWith('<table') || line.startsWith('<tr') || line.startsWith('<th') || line.startsWith('<td') || line.startsWith('</table') || line.startsWith('</div')) {
-            if (inList) { htmlLines.push('</ul>'); inList = false; }
+            if (inList) { htmlLines.push(`</${listType}>`); inList = false; listType = null; }
             htmlLines.push(line); continue;
         }
         if (line.trim() !== '') {
-            if (inList) { htmlLines.push('</ul>'); inList = false; }
+            if (inList) { htmlLines.push(`</${listType}>`); inList = false; listType = null; }
             if (line.trim().startsWith('<')) {
                 htmlLines.push(line);
             } else {
@@ -162,7 +179,7 @@ function parseMarkdown(md) {
             }
         }
     }
-    if (inList) htmlLines.push('</ul>');
+    if (inList) htmlLines.push(`</${listType}>`);
     return { frontMatter, html: htmlLines.join('\n') };
 }
 

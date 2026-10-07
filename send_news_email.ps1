@@ -4,8 +4,8 @@ param(
     [string[]]$BccEmails = @()
 )
 
-$SenderEmail = "arymir@gmail.com"
-$AppPassword = "ggrggqdhokophtkz"
+$SenderEmail = $env:GMAIL_SENDER
+$AppPassword = $env:GMAIL_APP_PASSWORD
 
 if (-not $SenderEmail -or -not $AppPassword -or $AppPassword -eq "your_16_character_app_password") {
     Write-Host "Error: Please set GMAIL_SENDER and GMAIL_APP_PASSWORD correctly." -ForegroundColor Red
@@ -16,6 +16,12 @@ if (-not $SenderEmail -or -not $AppPassword -or $AppPassword -eq "your_16_charac
 if (-not (Test-Path $HtmlFilePath)) {
     Write-Host "Error: Could not find HTML file at $HtmlFilePath" -ForegroundColor Red
     exit 1
+}
+
+$BccControl = Join-Path $PSScriptRoot 'bcc_list.txt'
+$ControlLines = @(if (Test-Path $BccControl) { Get-Content $BccControl | ForEach-Object { $_.Trim() } | Where-Object { $_ -and -not $_.StartsWith('#') } })
+if ($ControlLines.Count -eq 0 -or $ControlLines[0].ToUpperInvariant() -ne 'YES') {
+    $BccEmails = @()
 }
 
 $HtmlContent = Get-Content -Path $HtmlFilePath -Raw -Encoding UTF8
@@ -48,4 +54,6 @@ try {
 catch {
     Write-Host "❌ Failed to send email. Error:" -ForegroundColor Red
     Write-Host $_.Exception.Message -ForegroundColor Red
+    throw
 }
+
