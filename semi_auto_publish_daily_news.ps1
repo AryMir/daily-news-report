@@ -183,7 +183,8 @@ source: "chatgpt-manual"
     $PreviewDir = Join-Path $ProjectDir ".preview"
     New-Item -ItemType Directory -Path $PreviewDir -Force | Out-Null
     $EmailHtmlFile = Join-Path $PreviewDir "email-$Date.html"
-    $EmailBody = $MainMatch.Groups["body"].Value
+    $EmailDate = [datetime]::ParseExact($Date, "yyyy-MM-dd", [Globalization.CultureInfo]::InvariantCulture).ToString("MMMM d, yyyy", [Globalization.CultureInfo]::GetCultureInfo("en-US"))
+    $EmailBody = "<h1>Daily News Report | $EmailDate</h1>" + $MainMatch.Groups["body"].Value
     $EmailHtml = @"
 <!DOCTYPE html>
 <html>
@@ -309,5 +310,6 @@ finally {
         $RunMutex.Dispose()
     }
 }
+
 
 
