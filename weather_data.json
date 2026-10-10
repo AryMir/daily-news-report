@@ -1,85 +1,85 @@
 {
-  "generatedAt": "2026-10-09T15:15:43.694Z",
+  "generatedAt": "2026-10-10T15:08:35.862Z",
   "today": {
     "location": "Henderson",
-    "dateIso": "2026-10-09",
-    "observedAt": "2026-10-09T08:15",
-    "precipChance": 2,
-    "date": "Friday, October 9",
-    "sunrise": "6:42 AM",
-    "sunset": "6:12 PM",
-    "uvIndex": 6.15,
+    "dateIso": "2026-10-10",
+    "observedAt": "2026-10-10T08:00",
+    "precipChance": 17,
+    "date": "Saturday, October 10",
+    "sunrise": "6:43 AM",
+    "sunset": "6:11 PM",
+    "uvIndex": 4.55,
     "day": {
-      "temp": 78,
+      "temp": 77,
       "condition": "Overcast",
-      "humidity": 23,
-      "windSpeed": 7,
+      "humidity": 25,
+      "windSpeed": 10,
       "windDir": "S"
     },
     "night": {
-      "temp": 80,
-      "condition": "Clear sky",
-      "humidity": 21,
-      "windSpeed": 9,
-      "windDir": "S"
+      "temp": 72,
+      "condition": "Overcast",
+      "humidity": 53,
+      "windSpeed": 24,
+      "windDir": "SE"
     },
-    "high": 93,
-    "low": 73
+    "high": 90,
+    "low": 72
   },
   "forecast": [
     {
-      "dayName": "10 Sat",
-      "high": 89,
-      "low": 69,
-      "condition": "Moderate drizzle",
-      "precipChance": 22,
-      "windSpeed": 30,
-      "windDir": "S"
-    },
-    {
       "dayName": "11 Sun",
-      "high": 73,
-      "low": 64,
-      "condition": "Heavy rain",
-      "precipChance": 91,
-      "windSpeed": 36,
+      "high": 70,
+      "low": 58,
+      "condition": "Light drizzle",
+      "precipChance": 77,
+      "windSpeed": 35,
       "windDir": "S"
     },
     {
       "dayName": "12 Mon",
-      "high": 76,
-      "low": 62,
-      "condition": "Light drizzle",
-      "precipChance": 27,
+      "high": 70,
+      "low": 59,
+      "condition": "Overcast",
+      "precipChance": 42,
       "windSpeed": 25,
       "windDir": "S"
     },
     {
       "dayName": "13 Tue",
-      "high": 72,
-      "low": 59,
-      "condition": "Slight rain showers",
-      "precipChance": 35,
-      "windSpeed": 10,
-      "windDir": "NE"
+      "high": 68,
+      "low": 56,
+      "condition": "Overcast",
+      "precipChance": 8,
+      "windSpeed": 14,
+      "windDir": "W"
     },
     {
       "dayName": "14 Wed",
-      "high": 75,
-      "low": 64,
-      "condition": "Slight rain showers",
-      "precipChance": 16,
-      "windSpeed": 8,
-      "windDir": "E"
+      "high": 71,
+      "low": 61,
+      "condition": "Clear sky",
+      "precipChance": 1,
+      "windSpeed": 5,
+      "windDir": "NE"
     },
     {
       "dayName": "15 Thu",
-      "high": 78,
+      "high": 79,
       "low": 66,
-      "condition": "Overcast",
+      "condition": "Clear sky",
       "precipChance": 1,
-      "windSpeed": 14,
+      "windSpeed": 19,
       "windDir": "N"
+    },
+    {
+      "dayName": "16 Fri",
+      "high": 81,
+      "low": 68,
+      "condition": "Clear sky",
+      "precipChance": 2,
+      "windSpeed": 13,
+      "windDir": "NE"
     }
   ]
 }
